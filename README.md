@@ -39,32 +39,147 @@ Soporte básico automatizado para consultas rápidas.
 
 ---
 
+## 🚀 Instalación y Ejecución
+
+### Requisitos Previos
+- Node.js (v18 o superior)
+- npm o yarn
+
+### Instalación
+```bash
+# Clonar el repositorio
+git clone https://github.com/tu-usuario/ferreteria-san-francisco-web.git
+
+# Entrar al directorio
+cd ferreteria-san-francisco-web
+
+# Instalar dependencias
+npm install
+```
+
+### Scripts Disponibles
+```bash
+# Iniciar servidor de desarrollo
+npm run dev
+
+# Crear build de producción
+npm run build
+
+# Previsualizar build de producción
+npm run preview
+
+# Ejecutar linter
+npm run lint
+```
+
+---
+
 ## 🛠️ Stack Tecnológico
 
 ![Scrum](https://img.shields.io/badge/Scrum-Methodology-blue?style=for-the-badge)
 
-### 🎨 Frontend  
-![React](https://img.shields.io/badge/Frontend-React%2018-61dafb?style=for-the-badge&logo=react&logoColor=white)  
+### 🎨 Frontend
+![React](https://img.shields.io/badge/Frontend-React%2019-61dafb?style=for-the-badge&logo=react&logoColor=white)
 Framework elegido para desarrollar una interfaz modular, ágil y mantenible.
 
-### 💅 Estilos  
-![Tailwind](https://img.shields.io/badge/Styles-TailwindCSS-38bdf8?style=for-the-badge&logo=tailwindcss&logoColor=white)  
+### 💅 Estilos
+![Tailwind](https://img.shields.io/badge/Styles-TailwindCSS%20v4-38bdf8?style=for-the-badge&logo=tailwindcss&logoColor=white)
 Sistema de utilidades para un diseño rápido, limpio y responsivo.
 
-### ⚡ Build Tool  
-![Vite](https://img.shields.io/badge/Build-Vite-bd34fe?style=for-the-badge&logo=vite&logoColor=white)  
+### ⚡ Build Tool
+![Vite](https://img.shields.io/badge/Build-Vite%207-bd34fe?style=for-the-badge&logo=vite&logoColor=white)
 Entorno de desarrollo rápido y moderno.
 
-### 🔗 APIs y Servicios
-- **EmailJS** – gestión de formularios  
-- **Google Maps API** – mapa y ubicación  
+### 📦 Dependencias Principales
+| Paquete | Versión | Descripción |
+|---------|---------|-------------|
+| react | ^19.2.0 | Librería UI |
+| react-dom | ^19.2.0 | DOM rendering |
+| react-router-dom | ^7.9.6 | Enrutamiento SPA |
+| @tanstack/react-query | ^5.90.10 | Manejo de estado servidor |
+| react-hook-form | ^7.66.1 | Manejo de formularios |
+| tailwindcss | ^4.1.17 | Framework CSS |
+| react-icons | ^5.5.0 | Iconos |
+| @emailjs/browser | ^4.4.1 | Envío de emails |
+| react-simple-chatbot | ^0.6.1 | Chatbot |
+| styled-components | ^4.4.1 | CSS-in-JS (para chatbot) |
 
-### 🚀 Deployment  
-![Netlify/Vercel](https://img.shields.io/badge/Deployment-Netlify%20%7C%20Vercel-black?style=for-the-badge&logo=vercel)  
+### 🔧 Dependencias de Desarrollo
+| Paquete | Versión | Descripción |
+|---------|---------|-------------|
+| vite | ^7.2.4 | Build tool |
+| @vitejs/plugin-react | ^5.1.1 | Plugin React para Vite |
+| eslint | ^9.39.1 | Linter |
+| prettier | ^3.6.2 | Formateo de código |
+| eslint-config-prettier | ^10.1.8 | Integración ESLint + Prettier |
+
+### 🔗 APIs y Servicios
+- **EmailJS** – gestión de formularios
+- **Google Maps API** – mapa y ubicación
+
+### 🚀 Deployment
+![Netlify/Vercel](https://img.shields.io/badge/Deployment-Netlify%20%7C%20Vercel-black?style=for-the-badge&logo=vercel)
 Servicios en la nube para deploy continuo.
 
-### 🔄 Control de Versiones  
+### 🔄 Control de Versiones
 Git + GitHub (workflows, branches, PRs)
+
+---
+
+## 📁 Estructura del Proyecto
+
+```
+src/
+├── app/                    # Configuración global de la app
+│   ├── providers/          # Providers (QueryProvider, etc.)
+│   └── router/             # Configuración de rutas
+│
+├── features/               # Módulos por funcionalidad
+│   ├── about/              # Página "Sobre Nosotros"
+│   │   ├── components/
+│   │   ├── pages/
+│   │   └── index.js
+│   ├── brands/             # Sección de marcas
+│   │   ├── api/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   └── index.js
+│   ├── chatbot/            # Chatbot de atención
+│   │   ├── api/
+│   │   ├── components/
+│   │   └── index.js
+│   ├── contact/            # Página de contacto
+│   │   ├── api/
+│   │   ├── components/
+│   │   ├── hooks/
+│   │   ├── pages/
+│   │   └── index.js
+│   ├── home/               # Página principal
+│   │   ├── components/
+│   │   ├── pages/
+│   │   └── index.js
+│   └── products/           # Galería de productos
+│       ├── api/
+│       ├── components/
+│       ├── hooks/
+│       ├── pages/
+│       └── index.js
+│
+├── shared/                 # Código compartido
+│   ├── components/
+│   │   ├── layout/         # Layout, Navbar, Footer, Sidebar
+│   │   └── ui/             # Componentes UI reutilizables
+│   ├── hooks/              # Hooks personalizados
+│   ├── lib/                # Utilidades y configuración
+│   │   └── api/            # Cliente API y endpoints
+│   └── utils/              # Funciones auxiliares
+│
+├── style/                  # Estilos globales
+│   └── globals.css
+│
+├── App.jsx                 # Componente raíz
+└── main.jsx                # Punto de entrada
+```
 
 ---
 
