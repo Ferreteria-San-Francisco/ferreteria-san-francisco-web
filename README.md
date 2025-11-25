@@ -267,3 +267,25 @@ El proyecto se encuentra **recién iniciando**, con estructura, planificación y
 
 ---
 
+## 🐳 Desarrollo con Docker
+Requisitos
+Docker Desktop instalado
+Ejecutar con Docker
+
+# Construir y correr
+docker-compose up --build
+
+# Disponible en http://localhost:5173
+
+# Detener
+docker-compose down
+
+Troubleshooting
+
+Verificar que Docker Desktop esté corriendo
+
+El puerto 5173 no debe estar en uso
+
+Reiniciar:
+
+docker-compose restart
