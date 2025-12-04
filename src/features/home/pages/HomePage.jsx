@@ -44,7 +44,7 @@ export default function HomePage() {
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {/* Servicio 1 */}
-                    <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm text-center">
+                    <div className="bg-gray-100 p-6 rounded-xl border border-gray-300 shadow-sm text-center">
                         <div className="text-yellow-400 text-5xl mb-4"> 🛠️ </div>
                         <h3 className="text-2xl font-bold mb-3 text-yellow-400"> Venta de Herramientas </h3>
                         <p className="text-gray-600">
@@ -53,7 +53,7 @@ export default function HomePage() {
                     </div>
 
                     {/* Servicio 2 */}
-                    <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm text-center">
+                    <div className="bg-gray-100 p-6 rounded-xl border border-gray-300 shadow-sm text-center">
                         <div className="text-yellow-400 text-5xl mb-4"> 🚚 </div>
                         <h3 className="text-2xl font-bold mb-3 text-yellow-400"> Entrega de Gas </h3>
                         <p className="text-gray-600">
@@ -62,7 +62,7 @@ export default function HomePage() {
                     </div>
 
                     {/* Servicio 3 */}
-                    <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm text-center">
+                    <div className="bg-gray-100 p-6 rounded-xl border border-gray-300 shadow-sm text-center">
                         <div className="text-yellow-400 text-5xl mb-4"> 🛒 </div>
                         <h3 className="text-2xl font-bold mb-3 text-yellow-400">Asesoría Técnica</h3>
                         <p className="text-gray-600"> 
