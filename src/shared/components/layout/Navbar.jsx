@@ -14,21 +14,44 @@ export default function Navbar() {
         <div className="flex gap-6">
           <NavLink
             to="/"
-            className="text-gray-700 hover:text-blue-600"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-600 font-bold"
+                : "text-gray-700 hover:text-blue-600"
+            }
           >
             Home
           </NavLink>
 
           <NavLink
-            to="/products"
-            className="text-gray-700 hover:text-blue-600"
+            to="/productos"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-600 font-bold"
+                : "text-gray-700 hover:text-blue-600"
+            }
           >
             Productos
           </NavLink>
 
           <NavLink
-            to="/contact"
-            className="text-gray-700 hover:text-blue-600"
+            to="/nosotros"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-600 font-bold"
+                : "text-gray-700 hover:text-blue-600"
+            }
+          >
+            Nosotros
+          </NavLink>
+
+          <NavLink
+            to="/contacto"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-600 font-bold"
+                : "text-gray-700 hover:text-blue-600"
+            }
           >
             Contacto
           </NavLink>
