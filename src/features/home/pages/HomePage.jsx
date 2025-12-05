@@ -33,6 +33,10 @@ export default function HomePage() {
                     >
                         Ferretería San Francisco
                     </h1>
+
+                    <p className="mt-4 max-w-xl text-white text-lg">
+                        Todo en ferretería, herramientas, gas y asesoramiento técnico en un solo lugar.
+                    </p>
                     </div>
                 </div>
             </section>{/* Cierre Hero Section */}
