@@ -1,3 +1,8 @@
+
+import TawkTo from "../../chatbot/components/TawkTo.jsx";
+
+
+
 export default function HomePage() {
     return (
         <div className="max-w-7xl mx-auto px-4 py-16 text-center">
@@ -7,6 +12,8 @@ export default function HomePage() {
             <p className="text-xl text-gray-600">
                 🛠️ Sitio en construcción. Próximamente mas contenido.
             </p>
+             {/* Chatbot */}
+            <TawkTo />
         </div>
     );
 }
