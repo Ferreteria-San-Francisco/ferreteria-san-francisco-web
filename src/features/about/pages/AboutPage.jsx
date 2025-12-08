@@ -29,8 +29,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-
-
       {/* Historia */}
       <section className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto mb-32">
         <img
@@ -73,20 +71,20 @@ const AboutPage = () => {
         </div>
       </section>
 
-    {/* Final */}
-    <section className="relative max-w-6xl mx-auto mb-16 overflow-hidden rounded-3xl">
-      <img
-        src="src/assets/images/about-end.jpg"
-        alt="Nuestro local"
-        className="w-full h-[420px] object-cover"
-      />
-      <div className="absolute inset-0 bg-black/35" />
-      <div className="absolute inset-0 flex items-end p-10">
-        <h3 className="text-white text-3xl font-semibold">
-          ¡Te esperamos en San Pedro de Colalao!
-        </h3>
-      </div>
-    </section>
+      {/* Final */}
+      <section className="relative max-w-6xl mx-auto mb-16 overflow-hidden rounded-3xl">
+        <img
+          src="src/assets/images/about-end.jpg"
+          alt="Nuestro local"
+          className="w-full h-[420px] object-cover"
+        />
+        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 flex items-end p-10">
+          <h3 className="text-white text-3xl font-semibold">
+            ¡Te esperamos en San Pedro de Colalao!
+          </h3>
+        </div>
+      </section>
     </main>
   );
 };
