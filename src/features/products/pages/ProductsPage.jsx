@@ -1,25 +1,11 @@
-import { useMemo } from 'react';
+import { useState } from 'react';
 import { products } from '../../../shared/data/products';
-// import { categorias } from '../../../shared/data/categorias'; //
 import ProductCard from '../components/ProductCard';
+import ProductFilters from '../components/ProductFilters';
 
 export default function ProductsPage() {
-  // Calcular estadísticas
-  const stats = useMemo(() => {
-    if (!products.length) return { total: 0, priceRange: { min: 0, max: 0 } };
-
-    const prices = products.map(p => p.price);
-    return {
-      total: products.length,
-      priceRange: {
-        min: Math.min(...prices),
-        max: Math.max(...prices)
-      }
-    };
-  }, []);
-
-  // Mostrar todos los productos
-  const filteredProducts = products;
+  // Estado para productos filtrados
+  const [filteredProducts, setFilteredProducts] = useState(products);
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
@@ -33,25 +19,29 @@ export default function ProductsPage() {
         </p>
         <div className="text-sm text-gray-500">
           Mostrando <span className="font-semibold">{filteredProducts.length}</span> de{' '}
-          <span className="font-semibold">{stats.total}</span> productos
+          <span className="font-semibold">{products.length}</span> productos
         </div>
       </div>
 
       {/* Contenedor principal */}
       <div className="flex flex-col lg:flex-row gap-8">
-        {/* Sidebar para filtros (placeholder) */}
+        {/* Sidebar para filtros */}
         <aside className="lg:w-1/4">
           <div className="mb-6">
-            <h2 className="text-lg font-semibold text-gray-800 mb-4">
-              Filtros
-            </h2>
-            <div
-              id="product-filters-placeholder"
-              className="text-center py-8 border border-dashed border-gray-300 rounded-lg"
-            >
-              <p className="text-gray-400">🔧 ProductFilters aquí</p>
-              <p className="text-xs text-gray-400 mt-2">(próximamente)</p>
-            </div>
+            <h2 className="text-lg font-semibold text-gray-800 mb-4">Filtros</h2>
+            
+            {/* Integración del componente lógico */}
+            <ProductFilters
+              products={products}
+              onFilterChange={setFilteredProducts}
+            />
+
+            {/* Placeholder visual */}
+            {import.meta.env?.MODE === 'development' && (
+              <div className="text-center py-4 text-xs text-gray-400">
+                🧠 Filtros lógicos montados (UI: pendiente)
+              </div>
+            )}
           </div>
         </aside>
 
@@ -59,21 +49,21 @@ export default function ProductsPage() {
         <main className="lg:w-3/4">
           {/* Barra de herramientas (placeholder) */}
           <div className="mb-6 p-4 bg-gray-50 rounded-lg">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-              <p className="text-gray-700">
-                Ordenar por: <span className="text-gray-500">(próximamente)</span>
-              </p>
-              <p className="text-gray-700">
-                Búsqueda: <span className="text-gray-500">(Se implementará)</span>
-              </p>
-            </div>
+            <p className="text-gray-700">
+              Búsqueda: <span className="text-gray-500">(próximamente)</span>
+            </p>
           </div>
 
           {/* Grid de productos */}
           {filteredProducts.length === 0 ? (
             <div className="text-center py-12">
               <p className="text-gray-500 text-lg mb-2">No se encontraron productos</p>
-              <p className="text-gray-400 text-sm">Intenta con otros filtros de búsqueda</p>
+              <button
+                onClick={() => setFilteredProducts(products)}
+                className="text-primary hover:underline text-sm"
+              >
+                Limpiar filtros
+              </button>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -82,37 +72,16 @@ export default function ProductsPage() {
               ))}
             </div>
           )}
-
-          {/* Paginación (placeholder) */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <div className="flex justify-between items-center">
-              <p className="text-sm text-gray-500">Página 1 de 1</p>
-              <p className="text-sm text-gray-500">
-                Paginación: <span className="text-gray-400">(próximamente)</span>
-              </p>
-            </div>
-          </div>
         </main>
       </div>
 
       {/* Debug info */}
       {import.meta.env?.MODE === 'development' && (
-        <div className="mt-12 p-4 bg-gray-100 rounded-lg text-xs">
-          <h3 className="font-semibold mb-2">🛠️ Debug Info (Solo desarrollo)</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-            <div>
-              <span className="font-medium">Total productos:</span> {stats.total}
-            </div>
-            <div>
-              <span className="font-medium">Filtrados:</span> {filteredProducts.length}
-            </div>
-            <div>
-              <span className="font-medium">Precio min:</span> ${stats.priceRange.min}
-            </div>
-            <div>
-              <span className="font-medium">Precio max:</span> ${stats.priceRange.max}
-            </div>
-          </div>
+        <div className="mt-8 p-3 bg-gray-50 rounded text-xs">
+          <p>
+            <strong>Filtros activos:</strong> 
+            Categoría: {filteredProducts.length > 0 ? filteredProducts[0]?.category || 'todas' : '—'}
+          </p>
         </div>
       )}
     </div>
