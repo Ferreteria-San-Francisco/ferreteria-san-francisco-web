@@ -2,7 +2,7 @@ export default function GoogleMap() {
   return (
     <section className="mb-20">
       {/* Título */}
-      <h2 className="text-4xl font-bold text-center text-gray-800 mb-4">
+      <h2 className="text-4xl font-bold text-center text-gray-800 mb-4 mt-10">
         Dónde encontrarnos
       </h2>
       <p className="text-center text-gray-600 mb-10">

@@ -1,5 +1,6 @@
 import TawkTo from "../../chatbot/components/TawkTo.jsx";
 import GoogleMap from "../components/GoogleMap.jsx";
+import ContactInfo from "../components/ContactInfo.jsx";
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -90,12 +91,8 @@ export default function ContactPage() {
           </div>
         </form>
 
-        <div className="bg-gray-50 p-8 rounded-xl shadow-md space-y-4">
-          <h2 className="text-2xl font-semibold text-center">Más formas de contactarnos</h2>
-          <p className="text-center">📞 Teléfono: (0260) 123-4567</p>
-          <p className="text-center">✉️ Email: ventas@ferreteria-sf.com</p>
-          <p className="text-center">📍 Dirección: Av. Principal 123, San Rafael, Mendoza</p>
-        </div>
+        {/* Información de Contacto */}
+        <ContactInfo />
       </div>
 
       {/* Mapa */}
