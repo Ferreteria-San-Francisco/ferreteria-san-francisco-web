@@ -1,6 +1,6 @@
 export default function ContactInfo() {
   return (
-    <div className="bg-gray-50 p-8 rounded-xl shadow-md space-y-4">
+    <div>
       <h2 className="text-2xl font-semibold text-center text-primary">Más formas de contactarnos</h2>
 
       <div className="space-y-2 text-center text-gray-700">
