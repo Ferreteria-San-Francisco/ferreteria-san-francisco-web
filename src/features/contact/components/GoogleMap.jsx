@@ -2,7 +2,7 @@ export default function GoogleMap() {
   return (
     <section className="mb-20">
       {/* Título */}
-      <h2 className="text-4xl font-bold text-center text-gray-800 mb-4 mt-10">
+      <h2 className="text-4xl font-bold text-center text-primary-light mb-6 text-stroke mb-4 mt-10">
         Dónde encontrarnos
       </h2>
       <p className="text-center text-gray-600 mb-10">
@@ -13,7 +13,7 @@ export default function GoogleMap() {
       <div className="relative w-full h-[420px] rounded-2xl overflow-hidden border border-gray-300 shadow-lg">
 
         {/* Overlay superior (estética + legibilidad) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 to-transparent z-10 pointer-events-none" />
 
         {/* Texto sobre el mapa */}
         <div className="absolute top-6 right-6 z-20 text-right">

@@ -31,7 +31,7 @@ export default function ContactFormRHF() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="space-y-6 bg-white p-8 rounded-xl shadow-md"
+      className="space-y-6 bg-white p-8 rounded-xl border border-gray-300 shadow-sm"
     >
       {/* Nombre */}
       <div>

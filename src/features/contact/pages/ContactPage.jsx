@@ -6,7 +6,7 @@ import ContactForm from "../components/ContactForm.jsx";
 export default function ContactPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-16 text-gray-800">
-      <h1 className="text-3xl font-bold text-center mb-8">Contacto</h1>
+      <h1 className="text-3xl font-bold text-center mb-8 text-primary-light mb-6 text-stroke">Contacto</h1>
 
       {/* Formulario + Información de Contacto */}
       <div className="space-y-12">
