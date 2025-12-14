@@ -2,15 +2,19 @@ import { useEffect } from "react";
 
 export default function TawkTo() {
   useEffect(() => {
-    const s1 = document.createElement("script");
-    const s0 = document.getElementsByTagName("script")[0];
+    if (window.Tawk_API) return;
 
-    s1.async = true;
-    s1.src = "https://embed.tawk.to/6932087cf66a4c198b426c1a/1jc84k8vc";
-    s1.charset = "UTF-8";
-    s1.setAttribute("crossorigin", "*");
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://embed.tawk.to/6932087cf66a4c198b426c1a/1jbln29r8";
+    script.charset = "UTF-8";
+    script.setAttribute("crossorigin", "*");
 
-    s0.parentNode.insertBefore(s1, s0);
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
   }, []);
 
   return null;
