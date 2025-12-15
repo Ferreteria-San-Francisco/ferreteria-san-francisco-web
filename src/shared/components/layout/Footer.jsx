@@ -38,7 +38,8 @@ const Footer = () => {
           <ul className="space-y-2 text-sm">
             <li>📍 Las Heras 5ta cuadra, San Pedro de Colalao, Tucumán</li>
             <li>📞 0381 405-2439</li>
-            <li>🕒 Lun a Domingos · 8hs a 13hs, 17hs a 21hs</li>
+            <li>🕒 Lunes a Sábados · 8hs a 13hs, 17hs a 21hs</li>
+            <li>🕒 Domingos · 8hs a 13hs</li>
           </ul>
         </div>
 

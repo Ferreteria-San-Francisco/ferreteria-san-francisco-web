@@ -2,7 +2,6 @@ import { useEffect } from "react";
 
 export default function TawkTo() {
   useEffect(() => {
-    // Evitar duplicar el script en caso de recargas
     if (window.Tawk_API) return;
 
     const script = document.createElement("script");
@@ -14,7 +13,6 @@ export default function TawkTo() {
     document.body.appendChild(script);
 
     return () => {
-      // Limpia si el componente se desmonta (no siempre necesario)
       document.body.removeChild(script);
     };
   }, []);
