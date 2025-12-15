@@ -6,7 +6,7 @@ export default function TawkTo() {
 
     const script = document.createElement("script");
     script.async = true;
-    script.src = "https://embed.tawk.to/6932087cf66a4c198b426c1a/1jbln29r8";
+    script.src = "https://embed.tawk.to/6932087cf66a4c198b426c1a/1jc84k8vc";
     script.charset = "UTF-8";
     script.setAttribute("crossorigin", "*");
 
