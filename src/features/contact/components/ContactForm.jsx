@@ -6,7 +6,7 @@ export default function ContactFormRHF() {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isSubmitting }
+    formState: { errors, isSubmitting },
   } = useForm();
 
   const [status, setStatus] = useState({ ok: null, msg: "" });
@@ -15,11 +15,20 @@ export default function ContactFormRHF() {
     setStatus({ ok: null, msg: "Enviando..." });
 
     try {
-      await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+      const formData = new FormData();
+      Object.entries(data).forEach(([key, value]) => {
+        formData.append(key, value);
       });
+
+      const response = await fetch("https://formspree.io/f/xdkqrpro", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (!response.ok) throw new Error();
 
       reset();
       setStatus({ ok: true, msg: "Mensaje enviado. ¡Gracias!" });
@@ -33,6 +42,9 @@ export default function ContactFormRHF() {
       onSubmit={handleSubmit(onSubmit)}
       className="space-y-6 bg-white p-8 rounded-xl border border-gray-300 shadow-sm"
     >
+      {/* Antispam */}
+      <input type="text" name="_gotcha" className="hidden" />
+
       {/* Nombre */}
       <div>
         <label className="block mb-1 font-medium">Nombre *</label>
@@ -41,7 +53,11 @@ export default function ContactFormRHF() {
           placeholder="Tu nombre"
           {...register("name", { required: "Ingresá tu nombre" })}
         />
-        {errors.name && <p className="text-red-600 text-sm mt-1">{errors.name.message}</p>}
+        {errors.name && (
+          <p className="text-red-600 text-sm mt-1">
+            {errors.name.message}
+          </p>
+        )}
       </div>
 
       {/* Email */}
@@ -58,7 +74,11 @@ export default function ContactFormRHF() {
             },
           })}
         />
-        {errors.email && <p className="text-red-600 text-sm mt-1">{errors.email.message}</p>}
+        {errors.email && (
+          <p className="text-red-600 text-sm mt-1">
+            {errors.email.message}
+          </p>
+        )}
       </div>
 
       {/* Teléfono opcional */}
@@ -80,7 +100,11 @@ export default function ContactFormRHF() {
           placeholder="Contanos tu consulta"
           {...register("message", { required: "Debe haber un mensaje" })}
         />
-        {errors.message && <p className="text-red-600 text-sm mt-1">{errors.message.message}</p>}
+        {errors.message && (
+          <p className="text-red-600 text-sm mt-1">
+            {errors.message.message}
+          </p>
+        )}
       </div>
 
       {/* Botón + estado */}
