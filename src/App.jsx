@@ -9,6 +9,7 @@ const ProductDetailPage = lazy(() => import('./features/products/pages/ProductDe
 const ContactPage = lazy(() => import('./features/contact/pages/ContactPage'));
 const MarcasPage = lazy(() => import('./features/brands/pages/MarcasPage'));
 const BrandDetailPage = lazy(() => import('./features/brands/pages/BrandDetailPage'));
+const PromotionsPage = lazy(() => import('./features/promotions/pages/PromotionsPage'));
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/contacto" element={<ContactPage />} />
           <Route path="/marcas" element={<MarcasPage />} />
           <Route path="/marcas/:id" element={<BrandDetailPage />} />
+          <Route path="/promociones" element={<PromotionsPage />} />
         </Route>
       </Routes>
     </Suspense>
