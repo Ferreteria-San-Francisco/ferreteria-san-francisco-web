@@ -10,6 +10,8 @@ const ContactPage = lazy(() => import('./features/contact/pages/ContactPage'));
 const MarcasPage = lazy(() => import('./features/brands/pages/MarcasPage'));
 const BrandDetailPage = lazy(() => import('./features/brands/pages/BrandDetailPage'));
 const PromotionsPage = lazy(() => import('./features/promotions/pages/PromotionsPage'));
+const NotFoundPage = lazy(() => import("./features/not-found/pages/NotFoundPage"));
+
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
           <Route path="/marcas" element={<MarcasPage />} />
           <Route path="/marcas/:id" element={<BrandDetailPage />} />
           <Route path="/promociones" element={<PromotionsPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </Suspense>
