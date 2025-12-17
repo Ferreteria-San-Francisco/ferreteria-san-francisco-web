@@ -4,26 +4,26 @@ const slides = [
   {
     title: "Calidad que construye confianza",
     subtitle: "Materiales y atención pensados para durar",
-    image: "src/assets/images/banner-slide1.jpg",
+    image: "src/assets/images/banner/banner-slide1.jpg",
     titleColor: "text-primary-light",
   },
   {
     title: "Todo para tu obra",
     subtitle: "Desde el cimiento hasta el último detalle",
-    image: "src/assets/images/banner-slide2.jpg",
+    image: "src/assets/images/banner/banner-slide2.jpg",
     titleColor: "text-primary-light",
   },
   {
     title: "Asesoramiento profesional",
     subtitle: "Te ayudamos a elegir lo que realmente necesitás",
-    image: "src/assets/images/banner-slide3.jpg",
+    image: "src/assets/images/banner/banner-slide3.jpg",
     titleColor: "text-primary-light",
   },
   {
   title: "Todo en un solo lugar",
   subtitle:
     "Ferretería, electricidad, sanitarios, herramientas, construcción, aberturas, forrajería, bicicletería, gas y más",
-  image: "src/assets/images/banner-slide4.jpg",
+  image: "src/assets/images/banner/banner-slide4.jpg",
   titleColor: "text-primary-light", 
   }
 ];

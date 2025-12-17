@@ -9,7 +9,7 @@ const AboutPage = () => {
       {/* Header */}
       <section className="relative min-h-[70vh] flex items-center justify-center text-center mb-32 overflow-hidden rounded-2xl">
         <img
-          src="src/assets/images/about-hero.jpg"
+          src="src/assets/images/about/about-hero.jpg"
           alt="Nuestro local"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -40,7 +40,7 @@ const AboutPage = () => {
       <section className="max-w-6xl mx-auto text-center">
         <div className="relative overflow-hidden rounded-3xl group">
           <img
-            src="src/assets/images/about-end.jpg"
+            src="src/assets/images/about/about-end.jpg"
             alt="Nuestro local"
             className="w-full h-[420px] object-cover"
           />

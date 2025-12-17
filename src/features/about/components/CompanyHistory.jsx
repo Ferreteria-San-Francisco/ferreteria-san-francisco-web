@@ -2,7 +2,7 @@ export default function CompanyHistory() {
   return (
     <section className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto mb-32">
       <img
-        src="src/assets/images/about-history.jpg"
+        src="src/assets/images/about/about-history.jpg"
         alt="Nuestra historia"
         className="w-full h-[420px] object-cover rounded-2xl"
       />
