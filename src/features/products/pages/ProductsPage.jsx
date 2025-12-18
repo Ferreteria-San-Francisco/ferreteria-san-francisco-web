@@ -1,3 +1,4 @@
+import { useState, useMemo } from 'react';
 import { products } from '../../../shared/data/products'; // Asegúrate de tener productos para mostrar
 import ProductCard from '../components/ProductCard'; // Componente que muestra cada producto
 import ProductSearch from '../components/ProductSearch'; // Componente de búsqueda
@@ -7,6 +8,8 @@ const PRODUCTS_PER_PAGE = 9;
 
 export default function ProductsPage() {
   const { filters, setFilter } = useProductFilters();
+
+  const [sortBy, setSortBy] = useState('name-asc');
 
   // Filtrar productos
   const filteredProducts = products.filter((product) => {
@@ -22,10 +25,20 @@ export default function ProductsPage() {
     return true;
   });
 
+  const sortedProducts = useMemo(() => {
+    return [...filteredProducts].sort((a, b) => {
+      if (sortBy === 'name-asc') return a.name.localeCompare(b.name);
+      if (sortBy === 'name-desc') return b.name.localeCompare(a.name);
+      if (sortBy === 'price-asc') return a.price - b.price;
+      if (sortBy === 'price-desc') return b.price - a.price;
+      return 0;
+    });
+  }, [filteredProducts, sortBy]);
+
   // Paginación
-  const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);
+  const totalPages = Math.ceil(sortedProducts.length / PRODUCTS_PER_PAGE);
   const startIndex = (filters.page - 1) * PRODUCTS_PER_PAGE;
-  const paginatedProducts = filteredProducts.slice(startIndex, startIndex + PRODUCTS_PER_PAGE);
+  const paginatedProducts = sortedProducts.slice(startIndex, startIndex + PRODUCTS_PER_PAGE);
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
@@ -34,6 +47,20 @@ export default function ProductsPage() {
       {/* Componente de Búsqueda */}
       <div className="mb-6">
         <ProductSearch />
+      </div>
+
+      <div className="mb-6 p-3 bg-gray-50 rounded text-sm">
+        <label className="font-medium">Ordenar por: </label>
+        <select
+          value={sortBy}
+          onChange={(e) => setSortBy(e.target.value)}
+          className="ml-2 border border-gray-300 rounded px-2 py-1 text-sm"
+        >
+          <option value="name-asc">Nombre A → Z</option>
+          <option value="name-desc">Nombre Z → A</option>
+          <option value="price-asc">Precio: menor a mayor</option>
+          <option value="price-desc">Precio: mayor a menor</option>
+        </select>
       </div>
 
       {/* Muestra los productos */}
