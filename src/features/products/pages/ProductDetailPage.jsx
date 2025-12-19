@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { products } from '../../../shared/data/products'; // Asumiendo que tienes esta lista
+import RelatedProducts from '../components/RelatedProducts';
 
 export default function ProductDetailPage() {
   const { id } = useParams(); // Obtiene el ID del producto desde la URL
@@ -15,6 +16,8 @@ export default function ProductDetailPage() {
       </div>
     );
   }
+
+  <RelatedProducts category={product.category} currentProductId={product.id} />
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
@@ -76,6 +79,7 @@ export default function ProductDetailPage() {
           </div>
         </div>
       </div>
+        <RelatedProducts category={product.category} currentProductId={product.id} />
     </div>
   );
 }
