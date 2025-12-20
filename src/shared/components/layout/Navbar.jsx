@@ -28,7 +28,7 @@ export default function Navbar() {
         </button>
 
         {/* Links desktop */}
-        <div className="hidden sm:flex gap-6">
+        <div className="hidden sm:flex gap-6 mt-5">
           <NavLink to="/" className={linkClass}> Home </NavLink>
           <NavLink to="/productos" className={linkClass}> Productos </NavLink>
           <NavLink to="/nosotros" className={linkClass}> Nosotros </NavLink>
