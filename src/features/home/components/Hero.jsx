@@ -4,7 +4,7 @@ export default function Hero() {
       <div className="relative h-[320px] sm:h-96 overflow-hidden rounded-2xl shadow-lg">
 
         <img
-          src="src/assets/images/hero-ferreteria.jpg"
+          src="src/assets/images/home/hero-ferreteria.jpg"
           alt="Ferretería San Francisco"
           className="w-full h-full object-cover"
         />
