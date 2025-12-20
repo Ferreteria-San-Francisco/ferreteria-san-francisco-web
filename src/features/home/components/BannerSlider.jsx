@@ -20,12 +20,12 @@ const slides = [
     titleColor: "text-primary-light",
   },
   {
-  title: "Todo en un solo lugar",
-  subtitle:
-    "Ferretería, electricidad, sanitarios, herramientas, construcción, aberturas, forrajería, bicicletería, gas y más",
-  image: "src/assets/images/banner/banner-slide4.jpg",
-  titleColor: "text-primary-light", 
-  }
+    title: "Todo en un solo lugar",
+    subtitle:
+      "Ferretería, electricidad, sanitarios, herramientas, construcción, aberturas, forrajería, bicicletería, gas y más",
+    image: "src/assets/images/banner/banner-slide4.jpg",
+    titleColor: "text-primary-light",
+  },
 ];
 
 export default function BannerSlider() {
@@ -40,7 +40,7 @@ export default function BannerSlider() {
   }, []);
 
   return (
-    <section className="relative w-full h-[420px] mb-24 overflow-hidden rounded-3xl shadow-lg">
+    <section className="relative w-full h-[260px] sm:h-[420px] mb-16 sm:mb-24 overflow-hidden rounded-2xl sm:rounded-3xl shadow-lg">
       {slides.map((slide, i) => (
         <div
           key={i}
@@ -54,15 +54,15 @@ export default function BannerSlider() {
             className="w-full h-full object-cover"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex items-end">
-            <div className="p-8 text-left text-white max-w-xl">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end">
+            <div className="p-4 sm:p-8 text-left text-white max-w-xl">
               <h2
-                className={`text-3xl md:text-4xl font-bold mb-2 ${slide.titleColor}`}
+                className={`text-xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 ${slide.titleColor}`}
               >
                 {slide.title}
               </h2>
 
-              <p className="text-lg text-white/90">
+              <p className="text-sm sm:text-base text-white/90 line-clamp-3">
                 {slide.subtitle}
               </p>
             </div>
