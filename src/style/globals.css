@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+  /* 🎨 Colores */
   --color-primary-light: #F5D94F;
   --color-primary: #D9B100;
   --color-primary-dark: #B89300;
@@ -12,8 +13,33 @@
   --color-text-dark: #333333;
   --color-text-medium: #616161;
   --color-text-light: #999999;
+
+  /* 📐 Layout & UX mobile */
+  --radius-base: 0.75rem;      /* bordes amigables */
+  --tap-min-height: 44px;      /* estándar mobile */
 }
 
-.text-stroke {
-  -webkit-text-stroke: 1px #D9B100;
+/* 🧠 Base global */
+@layer base {
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button,
+  a {
+    min-height: var(--tap-min-height);
+  }
+}
+
+/* ✨ Utilidades suaves */
+@layer utilities {
+  .rounded-base {
+    border-radius: var(--radius-base);
+  }
 }
