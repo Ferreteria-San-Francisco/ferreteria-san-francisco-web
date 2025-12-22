@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Layout from './shared/components/layout/Layout';
+import ErrorBoundary from './shared/components/ErrorBoundary';
 
 const HomePage = lazy(() => import('./features/home/pages/HomePage'));
 const AboutPage = lazy(() => import('./features/about/pages/AboutPage'));
@@ -15,21 +16,23 @@ const NotFoundPage = lazy(() => import("./features/not-found/pages/NotFoundPage"
 
 function App() {
   return (
-    <Suspense fallback={<div className="p-10 text-center text-xl">Cargando...</div>}>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/nosotros" element={<AboutPage />} />
-          <Route path="/productos" element={<ProductsPage />} />
-          <Route path="/productos/:id" element={<ProductDetailPage />} />
-          <Route path="/contacto" element={<ContactPage />} />
-          <Route path="/marcas" element={<MarcasPage />} />
-          <Route path="/marcas/:id" element={<BrandDetailPage />} />
-          <Route path="/promociones" element={<PromotionsPage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Route>
-      </Routes>
-    </Suspense>
+    <ErrorBoundary>
+      <Suspense fallback={<div className="p-10 text-center text-xl">Cargando...</div>}>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/nosotros" element={<AboutPage />} />
+            <Route path="/productos" element={<ProductsPage />} />
+            <Route path="/productos/:id" element={<ProductDetailPage />} />
+            <Route path="/contacto" element={<ContactPage />} />
+            <Route path="/marcas" element={<MarcasPage />} />
+            <Route path="/marcas/:id" element={<BrandDetailPage />} />
+            <Route path="/promociones" element={<PromotionsPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Route>
+        </Routes>
+      </Suspense>
+    </ErrorBoundary>
   );
 }
 

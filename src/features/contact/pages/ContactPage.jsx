@@ -2,6 +2,7 @@ import TawkTo from "../../chatbot/components/TawkTo.jsx";
 import GoogleMap from "../components/GoogleMap.jsx";
 import ContactInfo from "../components/ContactInfo.jsx";
 import ContactForm from "../components/ContactForm.jsx";
+import SEO from '../../../shared/components/SEO';
 
 export default function ContactPage() {
   return (
