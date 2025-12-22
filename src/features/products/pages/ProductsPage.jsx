@@ -3,6 +3,7 @@ import { products } from '../../../shared/data/products'; // Asegúrate de tener
 import ProductCard from '../components/ProductCard'; // Componente que muestra cada producto
 import ProductSearch from '../components/ProductSearch'; // Componente de búsqueda
 import { useProductFilters } from '../hooks/useProductFilters'; // El hook de filtros que creaste
+import SEO from '../../../shared/components/SEO';
 
 const PRODUCTS_PER_PAGE = 9;
 
@@ -41,59 +42,67 @@ export default function ProductsPage() {
   const paginatedProducts = sortedProducts.slice(startIndex, startIndex + PRODUCTS_PER_PAGE);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-gray-800 mb-8">Nuestros Productos</h1>
+      <>
+        <SEO
+          title="Productos"
+          description="Explorá nuestro catálogo de productos. Herramientas, materiales, pinturas y más en Ferretería San Francisco."
+          url="/products"
+        />
 
-      {/* Componente de Búsqueda */}
-      <div className="mb-6">
-        <ProductSearch />
-      </div>
+        <div className="max-w-7xl mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold text-gray-800 mb-8">Nuestros Productos</h1>
 
-      <div className="mb-6 p-3 bg-gray-50 rounded text-sm">
-        <label className="font-medium">Ordenar por: </label>
-        <select
-          value={sortBy}
-          onChange={(e) => setSortBy(e.target.value)}
-          className="ml-2 border border-gray-300 rounded px-2 py-1 text-sm"
-        >
-          <option value="name-asc">Nombre A → Z</option>
-          <option value="name-desc">Nombre Z → A</option>
-          <option value="price-asc">Precio: menor a mayor</option>
-          <option value="price-desc">Precio: mayor a menor</option>
-        </select>
-      </div>
+          {/* Componente de Búsqueda */}
+          <div className="mb-6">
+            <ProductSearch />
+          </div>
 
-      {/* Muestra los productos */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {paginatedProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
+          <div className="mb-6 p-3 bg-gray-50 rounded text-sm">
+            <label className="font-medium">Ordenar por: </label>
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+              className="ml-2 border border-gray-300 rounded px-2 py-1 text-sm"
+            >
+              <option value="name-asc">Nombre A → Z</option>
+              <option value="name-desc">Nombre Z → A</option>
+              <option value="price-asc">Precio: menor a mayor</option>
+              <option value="price-desc">Precio: mayor a menor</option>
+            </select>
+          </div>
 
-      {/* Paginación */}
-      {totalPages > 1 && (
-        <div className="flex justify-center gap-2 mt-8">
-          <button
-            onClick={() => setFilter('page', Math.max(1, filters.page - 1))}
-            disabled={filters.page === 1}
-            className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
-          >
-            Anterior
-          </button>
+          {/* Muestra los productos */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {paginatedProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
 
-          <span className="px-4 py-2">
-            Página {filters.page} de {totalPages}
-          </span>
+          {/* Paginación */}
+          {totalPages > 1 && (
+            <div className="flex justify-center gap-2 mt-8">
+              <button
+                onClick={() => setFilter('page', Math.max(1, filters.page - 1))}
+                disabled={filters.page === 1}
+                className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
+              >
+                Anterior
+              </button>
 
-          <button
-            onClick={() => setFilter('page', Math.min(totalPages, filters.page + 1))}
-            disabled={filters.page === totalPages}
-            className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
-          >
-            Siguiente
-          </button>
+              <span className="px-4 py-2">
+                Página {filters.page} de {totalPages}
+              </span>
+
+              <button
+                onClick={() => setFilter('page', Math.min(totalPages, filters.page + 1))}
+                disabled={filters.page === totalPages}
+                className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
+              >
+                Siguiente
+              </button>
+            </div>
+          )}
         </div>
-      )}
-    </div>
+      </>
   );
 }
