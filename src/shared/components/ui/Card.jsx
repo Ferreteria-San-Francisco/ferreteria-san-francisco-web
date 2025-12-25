@@ -4,4 +4,4 @@ export default function Card({ children, className = '' }) {
       {children}
     </div>
   );
-}
+} 
