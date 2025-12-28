@@ -74,6 +74,25 @@ export default function ProductsPage() {
             </select>
           </div>
 
+          {/* Filtros */}
+          <div className="mb-4 p-3 bg-gray-50 rounded text-sm">
+            <label className="block font-medium mb-1">Filtrar por categoría:</label>
+            <select
+              value={filters.category || 'todas'}
+              onChange={(e) => setFilter('category', e.target.value === 'todas' ? '' : e.target.value)}
+              className="border border-gray-300 rounded px-2 py-1"
+            >
+              <option value="todas">Todas</option>
+              <option value="herramientas-electricas">Herramientas Eléctricas</option>
+              <option value="herramientas-manuales">Herramientas Manuales</option>
+              <option value="pinturas">Pinturas</option>
+              <option value="construccion">Construcción</option>
+              <option value="electricidad">Electricidad</option>
+              <option value="plomeria">Plomería</option>
+              <option value="jardin">Jardín</option>
+            </select>
+          </div>
+
           <Link
             to="/promociones"
             className="btn btn-primary whitespace-nowrap"
