@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 export default function BrandCard({ brand }) {
-  // Iconos por categoría
+  
   const categoryIcons = {
     'herramientas-electricas': '⚡',
     'herramientas-manuales': '🛠️',
@@ -15,7 +15,7 @@ export default function BrandCard({ brand }) {
 
   return (
     <div className="group bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md hover:border-primary/30 transition-all duration-300">
-      {/* Logo de la marca */}
+      
       <div className="h-40 bg-gray-50 flex items-center justify-center p-6">
         <div className="relative w-full h-full flex items-center justify-center">
           <img
@@ -25,14 +25,14 @@ export default function BrandCard({ brand }) {
             loading="lazy"
           />
           
-          {/* Efecto hover sutil */}
+          
           <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
       </div>
 
-      {/* Contenido */}
+      
       <div className="p-5">
-        {/* Nombre y categoría */}
+        
         <div className="flex items-center justify-between mb-3">
           <h3 className="text-xl font-bold text-gray-800">
             {brand.name}
@@ -42,12 +42,12 @@ export default function BrandCard({ brand }) {
           </span>
         </div>
 
-        {/* Descripción */}
+        
         <p className="text-gray-600 text-sm mb-4 line-clamp-2">
           {brand.description}
         </p>
 
-        {/* Stats */}
+        
         <div className="flex items-center justify-between text-sm mb-4">
           <div className="flex items-center text-gray-500">
             <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
@@ -64,10 +64,10 @@ export default function BrandCard({ brand }) {
           )}
         </div>
 
-        {/* Separador */}
+        
         <div className="border-t border-gray-100 my-4"></div>
 
-        {/* Acciones */}
+        
         <div className="flex gap-2">
           <Link
             to={`/marcas/${brand.id}`}

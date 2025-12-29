@@ -9,10 +9,10 @@ export default function Hero() {
                     className="w-full h-full object-cover"
                 />
 
-                {/* Overlay */}
+        
                 <div className="absolute inset-0 bg-black/30" />
 
-                {/* Contenido */}
+     
                 <div className="absolute inset-0 flex flex-col justify-center items-center p-4">
                     <p className="text-3xl mb-3 text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
                         Bienvenido a

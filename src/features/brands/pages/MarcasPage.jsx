@@ -11,7 +11,7 @@ export default function MarcasPage() {
       />
 
       <div className="max-w-7xl mx-auto px-4 py-8">
-        {/* Título */}
+        
         <div className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
             Nuestras Marcas
@@ -21,7 +21,7 @@ export default function MarcasPage() {
           </p>
         </div>
 
-        {/* Grid de marcas */}
+        
         {marcas.length === 0 ? (
           <div className="text-center py-12">
             <p className="text-gray-500">No hay marcas disponibles</p>
@@ -37,7 +37,7 @@ export default function MarcasPage() {
           </div>
         )}
 
-        {/* Debug info */}
+       
         {import.meta.env?.MODE === 'development' && (
           <div className="mt-8 p-3 bg-gray-50 text-xs rounded">
             <p>

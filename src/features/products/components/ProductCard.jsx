@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 export default function ProductCard({ product }) {
-  // Formatear precio en pesos argentinos
+
   const formatPrice = (price) => {
     return new Intl.NumberFormat('es-AR', {
       style: 'currency',
@@ -13,7 +13,7 @@ export default function ProductCard({ product }) {
 
   return (
     <div className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
-      {/* Imagen del producto */}
+    
       <div className="relative h-56 overflow-hidden bg-gray-50">
         <img
           src={product.image || 'https://via.placeholder.com/400x300?text=Producto'}
@@ -22,7 +22,7 @@ export default function ProductCard({ product }) {
           loading="lazy"
         />
         
-        {/* Badges */}
+     
         <div className="absolute top-3 left-3 flex flex-col gap-1">
           {product.featured && (
             <span className="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
@@ -41,7 +41,7 @@ export default function ProductCard({ product }) {
           )}
         </div>
         
-        {/* Favorito (opcional a futuro) */}
+     
         <button 
           className="absolute top-3 right-3 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition"
           aria-label="Agregar a favoritos"
@@ -52,16 +52,16 @@ export default function ProductCard({ product }) {
         </button>
       </div>
 
-      {/* Contenido */}
+  
       <div className="p-5">
-        {/* Categoría */}
+   
         <div className="mb-2">
           <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded">
             {product.category}
           </span>
         </div>
 
-        {/* Nombre y marca */}
+   
         <h3 className="text-lg font-bold text-gray-800 mb-1 line-clamp-2">
           {product.name}
         </h3>
@@ -70,7 +70,7 @@ export default function ProductCard({ product }) {
           {product.brand}
         </p>
 
-        {/* Precio */}
+
         <div className="flex items-center justify-between mb-4">
           <div>
             <span className="text-2xl font-bold text-gray-900">
@@ -83,7 +83,7 @@ export default function ProductCard({ product }) {
             )}
           </div>
           
-          {/* Descuento porcentual si hay (opcional) */}
+        
           {product.originalPrice && (
             <span className="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">
               {Math.round((1 - product.price / product.originalPrice) * 100)}% OFF
@@ -91,7 +91,7 @@ export default function ProductCard({ product }) {
           )}
         </div>
 
-        {/* Características */}
+  
         {product.characteristics && product.characteristics.length > 0 && (
           <div className="mb-4">
             <ul className="text-xs text-gray-600 space-y-1">
@@ -107,7 +107,7 @@ export default function ProductCard({ product }) {
           </div>
         )}
 
-        {/* Stock */}
+ 
         <div className="mb-4">
           <div className="flex items-center justify-between text-sm">
             <span className="text-gray-600">Disponibilidad:</span>
@@ -125,7 +125,7 @@ export default function ProductCard({ product }) {
           )}
         </div>
 
-        {/* Botones de acción */}
+   
         <div className="flex gap-2">
           <Link
             to={`/productos/${product.id}`}

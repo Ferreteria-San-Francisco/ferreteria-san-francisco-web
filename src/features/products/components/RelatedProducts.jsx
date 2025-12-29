@@ -9,7 +9,7 @@ import ProductCard from './ProductCard';
 export default function RelatedProducts({ category, currentProductId }) {
   const related = products
     .filter(p => p.category === category && p.id !== currentProductId)
-    .slice(0, 4); // máximo 4 productos
+    .slice(0, 4);
 
   if (related.length === 0) return null;
 
