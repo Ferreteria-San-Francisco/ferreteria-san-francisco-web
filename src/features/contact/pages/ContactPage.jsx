@@ -18,21 +18,21 @@ export default function ContactPage() {
 
         <div className="w-12 h-1 bg-primary mb-4 rounded-full mx-auto" />
 
-        {/* Formulario + Información de Contacto */}
+        
         <div className="space-y-12">
           <ContactForm />
           
         </div>
 
-        {/* Mapa */}
+      
         <GoogleMap />
 
         <div className="mt-12">
-        {/* Información de contacto */}
+  
         <ContactInfo />
         </div>
 
-        {/* Chatbot */}
+     
         <div className="mt-12">
           <TawkTo />
         </div>

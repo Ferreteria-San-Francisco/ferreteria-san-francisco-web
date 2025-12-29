@@ -1,10 +1,10 @@
 import { useParams, Link } from 'react-router-dom';
-import { products } from '../../../shared/data/products'; // Asumiendo que tienes esta lista
+import { products } from '../../../shared/data/products';
 import RelatedProducts from '../components/RelatedProducts';
 import SEO from '../../../shared/components/SEO';
 
 export default function ProductDetailPage() {
-  const { id } = useParams(); // Obtiene el ID del producto desde la URL
+  const { id } = useParams(); 
   const product = products.find((p) => p.id === parseInt(id));
 
   if (!product) {
@@ -35,7 +35,7 @@ export default function ProductDetailPage() {
       />
       
       <div className="max-w-7xl mx-auto px-4 py-8">
-        {/* Breadcrumb */}
+        
         <nav className="mb-6 text-sm">
           <Link to="/productos" className="text-primary hover:underline">Productos</Link>
           <span className="mx-2">/</span>
@@ -43,7 +43,7 @@ export default function ProductDetailPage() {
         </nav>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {/* Imagen del Producto */}
+          
           <div className="bg-gray-100 rounded-xl overflow-hidden">
             <img
               src={product.image}
@@ -52,7 +52,7 @@ export default function ProductDetailPage() {
             />
           </div>
 
-          {/* Información del Producto */}
+         
           <div>
             <span className="text-sm text-primary font-semibold">{product.brand}</span>
             <h1 className="text-3xl font-bold text-gray-800 mt-2">{product.name}</h1>
@@ -70,7 +70,7 @@ export default function ProductDetailPage() {
 
             <p className="mt-6 text-gray-600">{product.description}</p>
 
-            {/* Características del Producto */}
+           
             {product.characteristics && (
               <div className="mt-6">
                 <h3 className="font-semibold text-gray-800 mb-2">Características:</h3>
@@ -85,7 +85,7 @@ export default function ProductDetailPage() {
               </div>
             )}
 
-            {/* Stock */}
+          
             <div className="mt-6">
               <span className={`font-semibold ${product.stock > 0 ? 'text-green-600' : 'text-red-600'}`}>
                 {product.stock > 0 ? `${product.stock} en stock` : 'Sin stock'}

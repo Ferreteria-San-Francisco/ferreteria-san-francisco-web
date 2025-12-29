@@ -4,7 +4,7 @@ import ProductCard from '../../products/components/ProductCard';
 export default function FeatureProducts() {
   const featured = products.filter(p => p.featured);
 
-  // Si no hay productos destacados, no renderiza nada
+
   if (featured.length === 0) return null;
 
   return (

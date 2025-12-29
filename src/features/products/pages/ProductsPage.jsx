@@ -52,12 +52,12 @@ export default function ProductsPage() {
           Nuestros Productos
         </h1>
 
-        {/* Buscador */}
+      
         <div className="mb-6">
           <ProductSearch />
         </div>
 
-        {/* Ordenar + Promociones */}
+       
         <div className="mb-6 p-3 bg-gray-50 rounded text-sm flex items-center justify-between gap-4">
           
           <div className="flex items-center">
@@ -83,14 +83,14 @@ export default function ProductsPage() {
         </div>
 
 
-        {/* Productos */}
+       
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {paginatedProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
 
-        {/* Paginación */}
+       
         {totalPages > 1 && (
           <div className="flex justify-center gap-2 mt-8">
             <button

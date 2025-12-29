@@ -9,7 +9,7 @@ export default function ServicesSection() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-        {/* Servicio 1 */}
+     
         <div className="p-6 rounded-xl border border-gray-200 shadow-sm text-center">
           <div className="text-primary text-5xl mb-4">🛠️</div>
           <h3 className="text-2xl font-bold mb-3 text-primary">
@@ -20,7 +20,7 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        {/* Servicio 2 */}
+    
         <div className="p-6 rounded-xl border border-gray-200 shadow-sm text-center">
           <div className="text-primary text-5xl mb-4">🚚</div>
           <h3 className="text-2xl font-bold mb-3 text-primary">
@@ -31,7 +31,7 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        {/* Servicio 3 */}
+
         <div className="p-6 rounded-xl border border-gray-200 shadow-sm text-center">
           <div className="text-primary text-5xl mb-4">🛒</div>
           <h3 className="text-2xl font-bold mb-3 text-primary">

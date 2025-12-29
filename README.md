@@ -1,291 +1,250 @@
-# 🛠️ Ferretería San Francisco – Proyecto Web  
-![Status](https://img.shields.io/badge/Status-En%20desarrollo-yellow?style=for-the-badge)
+# Ferretería San Francisco - Sitio Web
 
-Este repositorio corresponde al desarrollo del sitio web oficial de **Ferretería San Francisco**, un proyecto actualmente en proceso y construido bajo metodología **Scrum**.
+![Status](https://img.shields.io/badge/Status-Completado-green?style=flat-square)
+![React](https://img.shields.io/badge/React-19.2-61dafb?style=flat-square&logo=react)
+![Vite](https://img.shields.io/badge/Vite-7.2-bd34fe?style=flat-square&logo=vite)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-4.1-38bdf8?style=flat-square&logo=tailwindcss)
 
----
+Sitio web institucional y catálogo de productos para Ferretería San Francisco. Desarrollado con React + Vite + TailwindCSS.
 
-## 📌 Funcionalidades Principales
-
-### 🏠 Página Principal (Home)
-Presentación de la ferretería y accesos clave.
-
-### 🧾 Sección Institucional – *"Conocé la Marca"*
-Historia, valores, misión y visión de la marca.
-
-### 🛠️ Galería de Productos con Filtros
-- Filtros por categoría  
-- Presentación clara y responsiva  
-- Base para ampliación futura (e-commerce)
-
-### 🏷️ Sección de Marcas
-Listado de las marcas comercializadas.
-
-### 📩 Página de Contacto con Formulario
-Integrado con **EmailJS** para envío de consultas.
-
-### 📍 Google Maps API
-Ubicación exacta del local.
-
-### 🤖 ChatBot de Atención al Cliente
-Soporte básico automatizado para consultas rápidas.
+**URL de producción:** [https://ferreteria-san-francisco.vercel.app](https://ferreteria-san-francisco.vercel.app)
 
 ---
 
-## 🚫 No Incluye (por ahora)
-- Carrito de compras  
-- Sistema de pagos  
-- E-commerce completo  
+## Características
+
+- **Catálogo de productos** con filtros por categoría, marca y precio
+- **Búsqueda** con debounce para mejor performance
+- **Ordenamiento** por nombre y precio
+- **Paginación** del catálogo
+- **Vista detalle** de productos con características y productos relacionados
+- **Sección de marcas** con detalle por marca
+- **Formulario de contacto** integrado con Formspree
+- **Chat en vivo** con Tawk.to
+- **SEO optimizado** con react-helmet-async, sitemap.xml y Open Graph
+- **Google Analytics** integrado
+- **Responsive** optimizado para mobile, tablet y desktop
+- **Lazy loading** de páginas para mejor performance
 
 ---
 
-## 🚀 Instalación y Ejecución
+## Stack Tecnológico
 
-### Requisitos Previos
-- Node.js (v18 o superior)
-- npm o yarn
+| Tecnología | Versión | Uso |
+|------------|---------|-----|
+| React | 19.2 | UI Framework |
+| Vite | 7.2 | Build tool |
+| TailwindCSS | 4.1 | Estilos |
+| React Router | 7.9 | Routing SPA |
+| React Hook Form | 7.66 | Formularios |
+| react-helmet-async | - | SEO |
 
-### Instalación
+### Servicios externos
+
+| Servicio | Uso |
+|----------|-----|
+| Formspree | Envío de formulario de contacto |
+| Tawk.to | Chat en vivo |
+| Google Analytics | Analíticas |
+| Vercel | Hosting |
+
+---
+
+## Instalación
+
 ```bash
-# Clonar el repositorio
-git clone https://github.com/tu-usuario/ferreteria-san-francisco-web.git
-
-# Entrar al directorio
+# Clonar repositorio
+git clone https://github.com/Ferreteria-San-Francisco/ferreteria-san-francisco-web.git
 cd ferreteria-san-francisco-web
 
 # Instalar dependencias
 npm install
-```
 
-### Scripts Disponibles
-```bash
-# Iniciar servidor de desarrollo
+# Servidor de desarrollo
 npm run dev
 
-# Crear build de producción
+# Build de producción
 npm run build
 
-# Previsualizar build de producción
+# Preview del build
 npm run preview
-
-# Ejecutar linter
-npm run lint
 ```
 
----
-
-## 🛠️ Stack Tecnológico
-
-![Scrum](https://img.shields.io/badge/Scrum-Methodology-blue?style=for-the-badge)
-
-### 🎨 Frontend
-![React](https://img.shields.io/badge/Frontend-React%2019-61dafb?style=for-the-badge&logo=react&logoColor=white)
-Framework elegido para desarrollar una interfaz modular, ágil y mantenible.
-
-### 💅 Estilos
-![Tailwind](https://img.shields.io/badge/Styles-TailwindCSS%20v4-38bdf8?style=for-the-badge&logo=tailwindcss&logoColor=white)
-Sistema de utilidades para un diseño rápido, limpio y responsivo.
-
-### ⚡ Build Tool
-![Vite](https://img.shields.io/badge/Build-Vite%207-bd34fe?style=for-the-badge&logo=vite&logoColor=white)
-Entorno de desarrollo rápido y moderno.
-
-### 📦 Dependencias Principales
-| Paquete | Versión | Descripción |
-|---------|---------|-------------|
-| react | ^19.2.0 | Librería UI |
-| react-dom | ^19.2.0 | DOM rendering |
-| react-router-dom | ^7.9.6 | Enrutamiento SPA |
-| @tanstack/react-query | ^5.90.10 | Manejo de estado servidor |
-| react-hook-form | ^7.66.1 | Manejo de formularios |
-| tailwindcss | ^4.1.17 | Framework CSS |
-| react-icons | ^5.5.0 | Iconos |
-| @emailjs/browser | ^4.4.1 | Envío de emails |
-| react-simple-chatbot | ^0.6.1 | Chatbot |
-| styled-components | ^4.4.1 | CSS-in-JS (para chatbot) |
-
-### 🔧 Dependencias de Desarrollo
-| Paquete | Versión | Descripción |
-|---------|---------|-------------|
-| vite | ^7.2.4 | Build tool |
-| @vitejs/plugin-react | ^5.1.1 | Plugin React para Vite |
-| eslint | ^9.39.1 | Linter |
-| prettier | ^3.6.2 | Formateo de código |
-| eslint-config-prettier | ^10.1.8 | Integración ESLint + Prettier |
-
-### 🔗 APIs y Servicios
-- **EmailJS** – gestión de formularios
-- **Google Maps API** – mapa y ubicación
-
-### 🚀 Deployment
-![Netlify/Vercel](https://img.shields.io/badge/Deployment-Netlify%20%7C%20Vercel-black?style=for-the-badge&logo=vercel)
-Servicios en la nube para deploy continuo.
-
-### 🔄 Control de Versiones
-Git + GitHub (workflows, branches, PRs)
+### Requisitos
+- Node.js 18+
+- npm 9+
 
 ---
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 src/
-├── app/                    # Configuración global de la app
-│   ├── providers/          # Providers (QueryProvider, etc.)
-│   └── router/             # Configuración de rutas
+├── features/           # Módulos por funcionalidad
+│   ├── home/          # Página principal
+│   ├── products/      # Catálogo y detalle de productos
+│   ├── brands/        # Sección de marcas
+│   ├── about/         # Página institucional
+│   ├── contact/       # Formulario de contacto
+│   ├── promotions/    # Página de promociones
+│   ├── not-found/     # Página 404
+│   └── chatbot/       # Integración Tawk.to
 │
-├── features/               # Módulos por funcionalidad
-│   ├── about/              # Página "Sobre Nosotros"
-│   │   ├── components/
-│   │   ├── pages/
-│   │   └── index.js
-│   ├── brands/             # Sección de marcas
-│   │   ├── api/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   └── index.js
-│   ├── chatbot/            # Chatbot de atención
-│   │   ├── api/
-│   │   ├── components/
-│   │   └── index.js
-│   ├── contact/            # Página de contacto
-│   │   ├── api/
-│   │   ├── components/
-│   │   ├── hooks/
-│   │   ├── pages/
-│   │   └── index.js
-│   ├── home/               # Página principal
-│   │   ├── components/
-│   │   ├── pages/
-│   │   └── index.js
-│   └── products/           # Galería de productos
-│       ├── api/
-│       ├── components/
-│       ├── hooks/
-│       ├── pages/
-│       └── index.js
+├── shared/            # Código compartido
+│   ├── components/    # Componentes reutilizables
+│   │   ├── layout/    # Layout, Navbar, Footer
+│   │   └── ui/        # Componentes UI
+│   ├── data/          # Datos estáticos (productos, marcas)
+│   └── hooks/         # Custom hooks
 │
-├── shared/                 # Código compartido
-│   ├── components/
-│   │   ├── layout/         # Layout, Navbar, Footer, Sidebar
-│   │   └── ui/             # Componentes UI reutilizables
-│   ├── hooks/              # Hooks personalizados
-│   ├── lib/                # Utilidades y configuración
-│   │   └── api/            # Cliente API y endpoints
-│   └── utils/              # Funciones auxiliares
-│
-├── style/                  # Estilos globales
-│   └── globals.css
-│
-├── App.jsx                 # Componente raíz
-└── main.jsx                # Punto de entrada
+├── style/             # Estilos globales
+├── App.jsx            # Componente raíz con rutas
+└── main.jsx           # Entry point
+```
+
+### Arquitectura
+
+El proyecto usa **Feature-Based Architecture**:
+- Cada feature es un módulo independiente con sus páginas, componentes y datos
+- El código compartido está en `shared/`
+- Facilita escalabilidad y mantenimiento
+
+---
+
+## Páginas
+
+| Ruta | Página | Descripción |
+|------|--------|-------------|
+| `/` | Home | Página principal con hero, servicios y FAQ |
+| `/productos` | Productos | Catálogo con filtros, búsqueda y paginación |
+| `/productos/:id` | Detalle | Vista detalle del producto |
+| `/marcas` | Marcas | Grid de marcas disponibles |
+| `/marcas/:id` | Detalle Marca | Productos por marca |
+| `/nosotros` | Nosotros | Información institucional |
+| `/contacto` | Contacto | Formulario y mapa |
+| `/promociones` | Promociones | Ofertas vigentes |
+| `/*` | 404 | Página no encontrada |
+
+---
+
+## Datos
+
+Los datos de productos y marcas están en archivos estáticos:
+
+```
+src/shared/data/
+├── products.js    # 40 productos con categorías, precios, características
+└── marcas.js      # 22 marcas con logos y descripciones
+```
+
+### Estructura de un producto
+
+```javascript
+{
+  id: 1,
+  name: 'Taladro Percutor Bosch GSB 13 RE',
+  category: 'herramientas-electricas',
+  subcategory: 'taladros',
+  brand: 'Bosch',
+  price: 48999.99,
+  originalPrice: 52999.99,  // Precio anterior (opcional)
+  image: 'url-imagen',
+  description: 'Descripción del producto',
+  stock: 12,
+  featured: true,           // Mostrar en destacados
+  characteristics: ['650W', 'Mandril 13mm', ...],
+  tags: ['taladro', 'profesional', ...],
+  sku: 'BOS-TAL-650'
+}
 ```
 
 ---
 
-## 👥 Metodología Scrum
+## Scripts
 
-El proyecto se gestiona con enfoque iterativo y entregas por Sprint.
-
-### 🧭 Roles del Equipo
-
-#### **Scrum Master – Mercedes Guerra**
-- Facilita ceremonias Scrum  
-- Remueve bloqueantes  
-- Acompaña la gestión del proyecto  
-
-#### **Stakeholder – Raúl Guerra (Ferretería San Francisco)**
-- Define requerimientos del proyecto  
-- Revisa avances en Sprint Reviews  
-
-### 👨‍💻 Development Team  
-
-| Nombre      | Rol                   | Responsabilidades |
-|-------------|-----------------------|-------------------|
-| **Alejandro** | Frontend Lead | Setup React + Vite, arquitectura, componentes base |
-| **Nicolás** | UI/UX Developer | Wireframes, diseño visual, implementación con Tailwind, responsive |
-| **Ezequiel** | Feature Developer 1 | Galería de productos, filtros, sección de marcas |
-| **Ana Paula** | Feature Developer 2 | Página institucional, formulario de contacto, Google Maps |
-| **Mariana** | Integration & Deployment | Netlify/Vercel, EmailJS, chatbot, documentación |
-| **Melina** | QA & Code Review | Testing, code review, validación responsive |
+```bash
+npm run dev       # Servidor de desarrollo (localhost:5173)
+npm run build     # Build de producción
+npm run preview   # Preview del build (localhost:4173)
+npm run lint      # Ejecutar ESLint
+```
 
 ---
 
-## 🧰 Herramientas de Trabajo
+## Configuración de Servicios
 
-### 📋 Gestión de Tareas
-- **Trello**  
-  - Tablero: *"PPS - Ferretería San Francisco"*  
-  - Columnas: *Backlog | To Do | In Progress | In Review | Done*
+### Formspree (Formulario de contacto)
 
-### 💬 Comunicación
-- WhatsApp / Discord – comunicación diaria  
-- GitHub – discusiones y PRs  
-- Google Meet / Zoom – ceremonias Scrum  
+El formulario está configurado en `src/features/contact/components/ContactForm.jsx`.
+Para cambiar el endpoint, modificar la URL en la función `onSubmit`:
 
-### 💻 Desarrollo
-- Node.js (LTS)  
-- Git  
-- Visual Studio Code  
-- Cuenta GitHub  
-- Cuenta Trello  
+```javascript
+const response = await fetch("https://formspree.io/f/TU_FORM_ID", {
+  method: "POST",
+  // ...
+});
+```
 
-### ⏱️ Registro de Horas
-Google Sheets compartido  
-**Formato:** Fecha | Nombre | Horas | Actividad realizada | Sprint
+### Tawk.to (Chat)
 
----
+Configurado en `src/features/chatbot/components/TawkTo.jsx`.
+Para cambiar la cuenta, modificar el Property ID:
 
-## 🗓️ Cronograma General del Proyecto
+```javascript
+script.src = "https://embed.tawk.to/TU_PROPERTY_ID/TU_WIDGET_ID";
+```
 
-### **Semana 1–2 (Sprints 1–2) – Setup y planificación**
-- Configuración del proyecto  
-- Diseño de wireframes  
-- Definición de componentes base  
+### Google Analytics
 
-### **Semana 3–5 (Sprints 3–5) – Desarrollo Core**
-- Componentes reutilizables  
-- Navegación  
-- Página principal  
-- Galería de productos  
+Configurado en `index.html`. Cambiar el Measurement ID:
 
-### **Semana 6–7 (Sprints 6–7) – Features Avanzadas**
-- Integraciones (EmailJS, Google Maps)  
-- ChatBot  
-- Sección institucional y marcas  
-
-### **Semana 8 (Sprint 8) – Testing y Deployment**
-- Testing cross-browser  
-- Optimización  
-- Deployment final  
-- Documentación  
+```html
+<script async src="https://www.googletagmanager.com/gtag/js?id=TU_GA_ID"></script>
+```
 
 ---
 
-## 📌 Estado Actual
-El proyecto se encuentra **recién iniciando**, con estructura, planificación y setup técnico en proceso.  
+## Deploy
+
+El proyecto está configurado para deploy en **Vercel**:
+
+1. Conectar repositorio en Vercel
+2. Framework Preset: Vite
+3. Build Command: `npm run build`
+4. Output Directory: `dist`
+
+El deploy es automático en cada push a `main`.
 
 ---
 
-## 🐳 Desarrollo con Docker
-Requisitos
-Docker Desktop instalado
-Ejecutar con Docker
+## Performance
 
-# Construir y correr
-docker-compose up --build
+- **Bundle size:** ~66 KB (gzip)
+- **Lazy loading** de todas las páginas
+- **Imágenes** con loading="lazy"
+- **CSS** optimizado con Tailwind (purge automático)
 
-# Disponible en http://localhost:5173
+### Lighthouse Scores
 
-# Detener
-docker-compose down
+| Métrica | Score |
+|---------|-------|
+| Performance | >80 |
+| Accessibility | >80 |
+| Best Practices | >80 |
+| SEO | >80 |
 
-Troubleshooting
+---
 
-Verificar que Docker Desktop esté corriendo
+## Desarrollo Futuro
 
-El puerto 5173 no debe estar en uso
+El proyecto está preparado para escalar a e-commerce:
 
-Reiniciar:
+- Carpetas `api/` listas para conectar backend
+- React Query instalado para manejo de estado servidor
+- Estructura modular para agregar carrito, pagos, usuarios
 
-docker-compose restart
+---
+
+## Licencia
+
+Proyecto privado - Ferretería San Francisco © 2024

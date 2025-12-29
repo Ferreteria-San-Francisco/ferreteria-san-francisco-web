@@ -42,10 +42,10 @@ export default function ContactFormRHF() {
       onSubmit={handleSubmit(onSubmit)}
       className="space-y-6 bg-white p-8 rounded-xl border border-gray-300 shadow-sm"
     >
-      {/* Antispam */}
+      
       <input type="text" name="_gotcha" className="hidden" />
 
-      {/* Nombre */}
+      
       <div>
         <label className="block mb-1 font-medium">Nombre *</label>
         <input
@@ -60,7 +60,7 @@ export default function ContactFormRHF() {
         )}
       </div>
 
-      {/* Email */}
+      
       <div>
         <label className="block mb-1 font-medium">Email *</label>
         <input
@@ -81,7 +81,7 @@ export default function ContactFormRHF() {
         )}
       </div>
 
-      {/* Teléfono opcional */}
+      
       <div>
         <label className="block mb-1 font-medium">Teléfono (opcional)</label>
         <input
@@ -91,7 +91,7 @@ export default function ContactFormRHF() {
         />
       </div>
 
-      {/* Mensaje */}
+      
       <div>
         <label className="block mb-1 font-medium">Mensaje *</label>
         <textarea
@@ -107,7 +107,7 @@ export default function ContactFormRHF() {
         )}
       </div>
 
-      {/* Botón + estado */}
+     
       <div className="flex flex-col sm:flex-row sm:justify-between items-center gap-4">
         <button
           type="submit"

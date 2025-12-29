@@ -6,7 +6,7 @@ import ProductCard from '../../products/components/ProductCard';
 export default function BrandDetailPage() {
   const { id } = useParams();
 
-  // Validación robusta del ID
+  
   const brandId = Number(id);
   if (isNaN(brandId)) {
     return (
@@ -17,7 +17,7 @@ export default function BrandDetailPage() {
     );
   }
 
-  // Encontrar marca
+  
   const brand = marcas.find(m => m.id === brandId);
   if (!brand) {
     return (
@@ -31,12 +31,12 @@ export default function BrandDetailPage() {
     );
   }
 
-  // Filtrar productos
+  
   const brandProducts = products.filter(p => p.brand === brand.name);
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
-      {/* Cabecera */}
+      
       <div className="text-center mb-10">
         <div className="inline-block w-24 h-24 rounded-full bg-gray-200 items-center justify-center mb-4">
           {brand.logo ? (
@@ -58,7 +58,7 @@ export default function BrandDetailPage() {
         </p>
       </div>
 
-      {/* Productos */}
+      
       {brandProducts.length === 0 ? (
         <div className="text-center py-12">
           <p className="text-gray-500">No hay productos disponibles para esta marca.</p>
@@ -77,7 +77,7 @@ export default function BrandDetailPage() {
         </>
       )}
 
-      {/* Debug */}
+      
       {import.meta.env?.MODE === 'development' && (
         <div className="mt-8 p-3 bg-gray-50 rounded text-xs">
           <p><strong>Debug:</strong> ID={id} → brandId={brandId}</p>

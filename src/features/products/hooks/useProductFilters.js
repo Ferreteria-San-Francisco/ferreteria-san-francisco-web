@@ -4,7 +4,7 @@ import { useMemo } from 'react';
 export function useProductFilters() {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  // Leer filtros desde la URL
+  
   const filters = useMemo(() => ({
     category: searchParams.get('category') || '',
     brand: searchParams.get('brand') || '',
@@ -14,19 +14,19 @@ export function useProductFilters() {
     page: parseInt(searchParams.get('page') || '1', 10),
   }), [searchParams]);
 
-  // Modificar filtro
+  
   const setFilter = (key, value) => {
     const newParams = new URLSearchParams(searchParams);
 
     if (value) newParams.set(key, value);
     else newParams.delete(key);
 
-    if (key !== 'page') newParams.set('page', '1'); // reset paginación
+    if (key !== 'page') newParams.set('page', '1'); 
 
     setSearchParams(newParams);
   };
 
-  // Resetear filtros
+ 
   const clearFilters = () => {
     setSearchParams({});
   };

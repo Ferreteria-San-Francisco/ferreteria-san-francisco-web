@@ -3,7 +3,7 @@ const Footer = () => {
     <footer className="bg-gray-900 text-text-light py-12 mt-20">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
 
-        {/* Col 1: Marca */}
+  
         <div>
           <h3 className="text-xl font-bold text-primary-light mb-4">
             Ferretería San Francisco
@@ -15,7 +15,7 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Col 2: Servicios */}
+    
         <div>
             <h4 className="text-lg font-semibold text-primary-light mb-4">
                 Servicios
@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
 
 
-        {/* Col 3: Contacto */}
+    
         <div>
           <h4 className="text-lg font-semibold text-primary-light mb-4">
             Contacto
@@ -43,7 +43,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Col 4: Redes */}
+  
         <div>
             <h4 className="text-lg font-semibold text-primary-light mb-4">
                 Seguinos
@@ -83,7 +83,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
+    
       <div className="border-t border-gray-700 mt-10 pt-6 text-center text-xs text-text-medium">
         © {new Date().getFullYear()} Ferretería San Francisco. Todos los derechos reservados.
       </div>

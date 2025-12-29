@@ -9,7 +9,7 @@ export default function Navbar() {
     <nav className="bg-white shadow-md p-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         
-        {/* Logo */}
+
         <NavLink to="/" className="flex items-center">
           <img
             src={logo}
@@ -18,7 +18,7 @@ export default function Navbar() {
           />
         </NavLink>
 
-        {/* Links desktop (tu código, sin tocar) */}
+    
         <div className="hidden md:flex gap-6">
           <NavLink
             to="/"
@@ -65,7 +65,7 @@ export default function Navbar() {
           </NavLink>
         </div>
 
-        {/* Botón mobile */}
+
         <button
           className="md:hidden text-2xl"
           onClick={() => setOpen(!open)}
@@ -75,7 +75,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Menú mobile (agregado, no interfiere) */}
+  
       {open && (
         <div className="md:hidden mt-4 border-t pt-4">
           <div className="flex flex-col gap-4">
