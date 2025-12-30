@@ -14,7 +14,6 @@ const AboutPage = () => {
 
       <main className="px-6 md:px-20 py-16 text-text-medium">
 
-        {/* Header */}
         <section className="relative min-h-[70vh] flex items-center justify-center text-center mb-32 overflow-hidden rounded-2xl">
           <img
             src="src/assets/images/about/about-hero.jpg"
@@ -44,7 +43,7 @@ const AboutPage = () => {
         <ValuesSection />
         <TeamSection />
 
-        {/* Bloque final con imagen */}
+        
         <section className="max-w-6xl mx-auto text-center">
           <div className="relative overflow-hidden rounded-3xl group">
             <img

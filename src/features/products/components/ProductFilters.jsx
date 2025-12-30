@@ -1,4 +1,3 @@
-// src/features/products/components/ProductFilters.jsx
 import { useState, useEffect } from 'react';
 
 export default function ProductFilters({ products = [], onFilterChange }) {

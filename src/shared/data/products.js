@@ -1,5 +1,4 @@
 export const products = [
-  // ========== HERRAMIENTAS ELÉCTRICAS ==========
   {
     id: 1,
     name: 'Taladro Percutor Bosch GSB 13 RE',

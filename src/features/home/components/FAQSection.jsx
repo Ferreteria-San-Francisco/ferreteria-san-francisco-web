@@ -9,7 +9,7 @@ export default function FAQSection() {
 
       <div className="space-y-6 text-left">
 
-        {/* FAQ 1 */}
+    
         <div className="p-6 border border-gray-200 rounded-xl shadow-sm">
           <h3 className="text-xl font-semibold text-primary mb-2">
             ¿Hacen envíos a domicilio?
@@ -19,7 +19,7 @@ export default function FAQSection() {
           </p>
         </div>
 
-        {/* FAQ 2 */}
+      
         <div className="p-6 border border-gray-200 rounded-xl shadow-sm">
           <h3 className="text-xl font-semibold text-primary mb-2">
             ¿Cuáles son los horarios de atención?
@@ -29,7 +29,7 @@ export default function FAQSection() {
           </p>
         </div>
 
-        {/* FAQ 3 */}
+   
         <div className="p-6 border border-gray-200 rounded-xl shadow-sm">
           <h3 className="text-xl font-semibold text-primary mb-2">
             ¿Puedo pedir presupuesto?
@@ -39,7 +39,7 @@ export default function FAQSection() {
           </p>
         </div>
 
-        {/* FAQ 4 */}
+    
         <div className="p-6 border border-gray-200 rounded-xl shadow-sm">
           <h3 className="text-xl font-semibold text-primary mb-2">
             ¿Cuáles son los métodos de pago disponibles?
