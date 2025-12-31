@@ -61,8 +61,9 @@ export default function ProductsPage() {
         <div className="mb-6 p-3 bg-gray-50 rounded text-sm flex items-center justify-between gap-4">
           
           <div className="flex items-center">
-            <label className="font-medium mr-2">Ordenar por:</label>
+            <label htmlFor="sort-select" className="sr-only">Ordenar por</label>
             <select
+              id="sort-select"
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
               className="border border-gray-300 rounded px-2 py-1 text-sm"

@@ -1,5 +1,5 @@
 import { marcas } from '../../../shared/data/marcas';
-//import BrandsCard from '../../brands/pages/BrandsPage';
+import BrandCard from '../../components/BrandCard';
 import SEO from '../../../shared/components/SEO';
 
 export default function MarcasPage() {
@@ -29,10 +29,7 @@ export default function MarcasPage() {
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
             {marcas.map((marca) => (
-              <BrandsCard
-                key={marca.id}
-                marca={marca}
-              />
+              <BrandCard key={marca.id} brand={marca} />
             ))}
           </div>
         )}
