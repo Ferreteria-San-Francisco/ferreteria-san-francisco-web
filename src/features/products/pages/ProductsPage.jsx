@@ -57,16 +57,17 @@ export default function ProductsPage() {
           <ProductSearch />
         </div>
 
-       
-        <div className="mb-6 p-3 bg-gray-50 rounded text-sm flex items-center justify-between gap-4">
-          
-          <div className="flex items-center">
-            <label htmlFor="sort-select" className="sr-only">Ordenar por</label>
+
+        <div className="mb-6 p-3 bg-gray-50 rounded text-sm flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+
+          {/* Ordenar */}
+          <div className="flex items-center gap-2">
+            <label htmlFor="sort-select" className="text-gray-600 text-xs sm:text-sm">Ordenar:</label>
             <select
               id="sort-select"
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="border border-gray-300 rounded px-2 py-1 text-sm"
+              className="border border-gray-300 rounded px-2 py-1 text-sm flex-1 sm:flex-none"
             >
               <option value="name-asc">Nombre A → Z</option>
               <option value="name-desc">Nombre Z → A</option>
@@ -75,13 +76,14 @@ export default function ProductsPage() {
             </select>
           </div>
 
-          {/* Filtros */}
-          <div className="mb-4 p-3 bg-gray-50 rounded text-sm">
-            <label className="block font-medium mb-1">Filtrar por categoría:</label>
+          {/* Filtrar por categoría */}
+          <div className="flex items-center gap-2">
+            <label htmlFor="category-select" className="text-gray-600 text-xs sm:text-sm">Categoría:</label>
             <select
+              id="category-select"
               value={filters.category || 'todas'}
               onChange={(e) => setFilter('category', e.target.value === 'todas' ? '' : e.target.value)}
-              className="border border-gray-300 rounded px-2 py-1"
+              className="border border-gray-300 rounded px-2 py-1 text-sm flex-1 sm:flex-none"
             >
               <option value="todas">Todas</option>
               <option value="herramientas-electricas">Herramientas Eléctricas</option>
@@ -94,9 +96,10 @@ export default function ProductsPage() {
             </select>
           </div>
 
+          {/* Botón promociones */}
           <Link
             to="/promociones"
-            className="btn btn-primary whitespace-nowrap"
+            className="btn btn-primary whitespace-nowrap text-center w-full sm:w-auto"
           >
             Ver promociones
           </Link>
@@ -116,7 +119,7 @@ export default function ProductsPage() {
             <button
               onClick={() => setFilter('page', Math.max(1, filters.page - 1))}
               disabled={filters.page === 1}
-              className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
+              className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed"
             >
               Anterior
             </button>
@@ -128,7 +131,7 @@ export default function ProductsPage() {
             <button
               onClick={() => setFilter('page', Math.min(totalPages, filters.page + 1))}
               disabled={filters.page === totalPages}
-              className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
+              className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed"
             >
               Siguiente
             </button>

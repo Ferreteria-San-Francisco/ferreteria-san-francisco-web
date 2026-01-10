@@ -1,5 +1,5 @@
 import { marcas } from '../../../shared/data/marcas';
-import BrandCard from '../../components/BrandCard';
+import BrandCard from '../components/BrandCard';
 import SEO from '../../../shared/components/SEO';
 
 export default function MarcasPage() {
