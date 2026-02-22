@@ -1,10 +1,12 @@
+import HeroImg from '../../../assets/images/hero-ferreteria.jpg';
+
 export default function Hero() {
     return (
         <section className="mb-16 text-center">
             <div className="relative h-96 overflow-hidden rounded-xl shadow-lg">
 
                 <img
-                    src="src/assets/images/hero-ferreteria.jpg"
+                    src= {HeroImg}
                     alt="Ferretería San Francisco"
                     className="w-full h-full object-cover"
                 />
