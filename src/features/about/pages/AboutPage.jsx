@@ -3,6 +3,9 @@ import TeamSection from "../components/TeamSection.jsx";
 import ValuesSection from "../components/ValuesSection.jsx";
 import SEO from '../../../shared/components/SEO';
 
+import aboutHero from "../../../assets/images/about/about-hero.jpg";
+import aboutEnd from "../../../assets/images/about/about-end.jpg";
+
 const AboutPage = () => {
   return (
     <>
@@ -16,7 +19,7 @@ const AboutPage = () => {
 
         <section className="relative min-h-[70vh] flex items-center justify-center text-center mb-32 overflow-hidden rounded-2xl">
           <img
-            src="src/assets/images/about/about-hero.jpg"
+            src={aboutHero}
             alt="Nuestro local"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -47,7 +50,7 @@ const AboutPage = () => {
         <section className="max-w-6xl mx-auto text-center">
           <div className="relative overflow-hidden rounded-3xl group">
             <img
-              src="src/assets/images/about/about-end.jpg"
+              src={aboutEnd}
               alt="Nuestro local"
               className="w-full h-[420px] object-cover"
             />
