@@ -1,3 +1,60 @@
+// ========== IMPORTS DE IMÁGENES ==========
+// Herramientas Eléctricas
+import taladroBosch from '../../assets/images/products/electricas/taladro-bosch.jpg';
+import amoladoraBlackdecker from '../../assets/images/products/electricas/amoladora-blackdecker.jpg';
+import sierraCaladora from '../../assets/images/products/electricas/sierra-caladora.jpg';
+import lijadoraMakita from '../../assets/images/products/electricas/lijadora-makita.jpg';
+import atornilladorDewalt from '../../assets/images/products/electricas/atornillador-dewalt.jpg';
+import sierraCircular from '../../assets/images/products/electricas/sierra-circular.jpg';
+import pistolaCalor from '../../assets/images/products/electricas/pistola-calor.jpg';
+
+// Herramientas Manuales
+import martilloStanley from '../../assets/images/products/manuales/martillo-stanley.jpg';
+import destornilladoresStanley from '../../assets/images/products/manuales/destornilladores-stanley.jpg';
+import alicateTramontina from '../../assets/images/products/manuales/alicate-tramontina.jpg';
+import llaveFrancesa from '../../assets/images/products/manuales/llave-francesa.jpg';
+import llavesAllen from '../../assets/images/products/manuales/llaves-allen.jpg';
+import cintaMetrica from '../../assets/images/products/manuales/cinta-metrica.jpg';
+import nivelBurbuja from '../../assets/images/products/manuales/nivel-burbuja.jpg';
+
+// Pinturas
+import pinturaAlba from '../../assets/images/products/pinturas/pintura-alba.jpg';
+import esmalteTersuave from '../../assets/images/products/pinturas/esmalte-tersuave.jpg';
+import rodilloLana from '../../assets/images/products/pinturas/rodillo-lana.jpg';
+import brochaAngular from '../../assets/images/products/pinturas/brocha-angular.jpg';
+import barnizTersuave from '../../assets/images/products/pinturas/barniz-tersuave.jpg';
+import pinturaAnticorrosiva from '../../assets/images/products/pinturas/pintura-anticorrosiva.jpg';
+import bandejaRodillo from '../../assets/images/products/pinturas/bandeja-rodillo.jpg';
+
+// Construcción
+import cementoLomaNegra from '../../assets/images/products/construccion/cemento-loma-negra.jpg';
+import calSanMartin from '../../assets/images/products/construccion/cal-san-martin.jpg';
+import ladrilloComun from '../../assets/images/products/construccion/ladrillo-comun.jpg';
+import arenaFina from '../../assets/images/products/construccion/arena-fina.jpg';
+import hierroAcindar from '../../assets/images/products/construccion/hierro-acindar.jpg';
+
+// Electricidad
+import cablePirelli from '../../assets/images/products/electricidad/cable-pirelli.jpg';
+import tomaPirelli from '../../assets/images/products/electricidad/toma-pirelli.jpg';
+import interruptorPirelli from '../../assets/images/products/electricidad/interruptor-pirelli.jpg';
+import breakerSica from '../../assets/images/products/electricidad/breaker-sica.jpg';
+import cajaPirelli from '../../assets/images/products/electricidad/caja-pirelli.jpg';
+
+// Plomería
+import canioPvc from '../../assets/images/products/plomeria/canio-pvc.jpg';
+import llaveEsferica from '../../assets/images/products/plomeria/llave-esferica.jpg';
+import sifonRoca from '../../assets/images/products/plomeria/sifon-roca.jpg';
+import cintaTeflon from '../../assets/images/products/plomeria/cinta-teflon.jpg';
+
+// Jardín
+import mangueraTigre from '../../assets/images/products/jardin/manguera-tigre.jpg';
+import cortadoraCesped from '../../assets/images/products/jardin/cortadora-cesped.jpg';
+import fertilizante from '../../assets/images/products/jardin/fertilizante.jpg';
+
+// Seguridad
+import guantesCuero from '../../assets/images/products/seguridad/guantes-cuero.jpg';
+import anteojosUv from '../../assets/images/products/seguridad/anteojos-uv.jpg';
+
 export const products = [
   {
     id: 1,
@@ -7,7 +64,7 @@ export const products = [
     brand: 'Bosch',
     price: 48999.99,
     originalPrice: 52999.99,
-    image: '../src/assets/images/products/electricas/taladro-bosch.jpg',
+    image: taladroBosch,
     description: 'Taladro percutor profesional 650W, mandril 13mm, función impacto y reversa',
     stock: 12,
     featured: true,
@@ -23,7 +80,7 @@ export const products = [
     brand: 'Black & Decker',
     price: 32999.99,
     originalPrice: 35999.99,
-    image: '../src/assets/images/products/electricas/amoladora-blackdecker.jpg',
+    image: amoladoraBlackdecker,
     description: 'Amoladora angular para corte y desbaste, disco 115mm',
     stock: 8,
     featured: false,
@@ -39,7 +96,7 @@ export const products = [
     brand: 'Stanley',
     price: 27999.99,
     originalPrice: null,
-    image: '../src/assets/images/products/electricas/sierra-caladora.jpg',
+    image: sierraCaladora,
     description: 'Sierra caladora con corte preciso en madera y metales',
     stock: 6,
     featured: false,
@@ -55,7 +112,7 @@ export const products = [
     brand: 'Makita',
     price: 23999.99,
     originalPrice: 25999.99,
-    image: '../src/assets/images/products/electricas/lijadora-makita.jpg',
+    image: lijadoraMakita,
     description: 'Lijadora orbital para acabados finos en madera',
     stock: 10,
     featured: false,
@@ -73,7 +130,7 @@ export const products = [
     brand: 'Stanley',
     price: 8999.99,
     originalPrice: null,
-    image: '../src/assets/images/products/manuales/martillo-stanley.jpg',
+    image: martilloStanley,
     description: 'Martillo de uña profesional con mango fibra de vidrio',
     stock: 25,
     featured: true,
@@ -89,7 +146,7 @@ export const products = [
     brand: 'Stanley',
     price: 12999.99,
     originalPrice: 14999.99,
-    image: '../src/assets/images/products/manuales/destornilladores-stanley.jpg',
+    image: destornilladoresStanley,
     description: 'Set de destornilladores profesionales con puntas intercambiables',
     stock: 15,
     featured: false,
@@ -105,7 +162,7 @@ export const products = [
     brand: 'Tramontina',
     price: 7499.99,
     originalPrice: null,
-    image: '../src/assets/images/products/manuales/alicate-tramontina.jpg',
+    image: alicateTramontina,
     description: 'Alicate universal para corte y sujeción',
     stock: 20,
     featured: false,
@@ -121,7 +178,7 @@ export const products = [
     brand: 'Bahco',
     price: 15999.99,
     originalPrice: 17999.99,
-    image: '../src/assets/images/products/manuales/llave-francesa.jpg',
+    image: llaveFrancesa,
     description: 'Llave ajustable de alta calidad para tuercas y tornillos',
     stock: 12,
     featured: false,
@@ -139,7 +196,7 @@ export const products = [
     brand: 'Alba',
     price: 42999.99,
     originalPrice: 45999.99,
-    image: '../src/assets/images/products/pinturas/pintura-alba.jpg',
+    image: pinturaAlba,
     description: 'Pintura látex de alta calidad para interiores, gran poder cubritivo',
     stock: 8,
     featured: true,
@@ -155,7 +212,7 @@ export const products = [
     brand: 'Tersuave',
     price: 18999.99,
     originalPrice: null,
-    image: '../src/assets/images/products/pinturas/esmalte-tersuave.jpg',
+    image: esmalteTersuave,
     description: 'Esmalte sintético para interiores y exteriores, acabado semi-brillante',
     stock: 15,
     featured: false,
@@ -171,7 +228,7 @@ export const products = [
     brand: 'Alba',
     price: 4999.99,
     originalPrice: null,
-    image: '../src/assets/images/products/pinturas/rodillo-lana.jpg',
+    image: rodilloLana,
     description: 'Rodillo profesional de lana para aplicación de pintura en paredes',
     stock: 30,
     featured: false,
@@ -187,7 +244,7 @@ export const products = [
     brand: 'Alba',
     price: 3499.99,
     originalPrice: null,
-    image: '../src/assets/images/products/pinturas/brocha-angular.jpg',
+    image: brochaAngular,
     description: 'Brocha angular profesional para trabajos de detalle y bordes',
     stock: 25,
     featured: false,
@@ -205,7 +262,7 @@ export const products = [
     brand: 'Loma Negra',
     price: 8999.99,
     originalPrice: 9499.99,
-    image: '../src/assets/images/products/construccion/cemento-loma-negra.jpg',
+    image: cementoLomaNegra,
     description: 'Cemento Portland de uso general para construcción',
     stock: 40,
     featured: true,
@@ -221,7 +278,7 @@ export const products = [
     brand: 'San Martín',
     price: 5999.99,
     originalPrice: null,
-    image: '../src/assets/images/products/construccion/cal-san-martin.jpg',
+    image: calSanMartin,
     description: 'Cal hidráulica para revoques y mampostería',
     stock: 20,
     featured: false,
@@ -237,7 +294,7 @@ export const products = [
     brand: 'Cerámica San Lorenzo',
     price: 185999.99,
     originalPrice: null,
-    image: '../src/assets/images/products/construccion/ladrillo-comun.jpg',
+    image: ladrilloComun,
     description: 'Ladrillo común cerámico para mampostería',
     stock: 5,
     featured: false,
@@ -255,7 +312,7 @@ export const products = [
     brand: 'Pirelli',
     price: 58999.99,
     originalPrice: 62999.99,
-    image: '../src/assets/images/products/electricidad/cable-pirelli.jpg',
+    image: cablePirelli,
     description: 'Cable unipolar para instalaciones eléctricas domiciliarias',
     stock: 6,
     featured: false,
@@ -271,7 +328,7 @@ export const products = [
     brand: 'Pirelli',
     price: 2999.99,
     originalPrice: null,
-    image: '../src/assets/images/products/electricidad/toma-pirelli.jpg',
+    image: tomaPirelli,
     description: 'Toma doble con conexión a tierra para instalaciones seguras',
     stock: 35,
     featured: false,
@@ -289,7 +346,7 @@ export const products = [
     brand: 'Fate',
     price: 8999.99,
     originalPrice: null,
-    image: '../src/assets/images/products/plomeria/canio-pvc.jpg',
+    image: canioPvc,
     description: 'Caño de PVC para instalaciones de agua fría',
     stock: 18,
     featured: false,
@@ -305,7 +362,7 @@ export const products = [
     brand: 'FV',
     price: 6499.99,
     originalPrice: 6999.99,
-    image: '../src/assets/images/products/plomeria/llave-esferica.jpg',
+    image: llaveEsferica,
     description: 'Llave esférica de paso total para agua',
     stock: 22,
     featured: false,
@@ -323,7 +380,7 @@ export const products = [
     brand: 'Tigre',
     price: 18999.99,
     originalPrice: 20999.99,
-    image: '../src/assets/images/products/jardin/manguera-tigre.jpg',
+    image: mangueraTigre,
     description: 'Manguera flexible reforzada para riego de jardines',
     stock: 15,
     featured: true,
@@ -341,7 +398,7 @@ export const products = [
     brand: 'DeWalt',
     price: 78999.99,
     originalPrice: 84999.99,
-    image: '../src/assets/images/products/electricas/atornillador-dewalt.jpg',
+    image: atornilladorDewalt,
     description: 'Atornillador de impacto 18V con batería Li-ion y cargador rápido',
     stock: 7,
     featured: true,
@@ -357,7 +414,7 @@ export const products = [
     brand: 'Skil',
     price: 54999.99,
     originalPrice: 58999.99,
-    image: '../src/assets/images/products/electricas/sierra-circular.jpg',
+    image: sierraCircular,
     description: 'Sierra circular profesional para cortes precisos en madera y derivados',
     stock: 5,
     featured: false,
@@ -373,7 +430,7 @@ export const products = [
     brand: 'Stanley',
     price: 28999.99,
     originalPrice: 31999.99,
-    image: '../src/assets/images/products/electricas/pistola-calor.jpg',
+    image: pistolaCalor,
     description: 'Pistola de calor profesional para soldar plásticos, decapar pintura y más',
     stock: 9,
     featured: false,
@@ -391,7 +448,7 @@ export const products = [
     brand: 'Bahco',
     price: 11999.99,
     originalPrice: 13999.99,
-    image: '../src/assets/images/products/manuales/llaves-allen.jpg',
+    image: llavesAllen,
     description: 'Set profesional de llaves Allen métricas en estuche',
     stock: 18,
     featured: false,
@@ -407,7 +464,7 @@ export const products = [
     brand: 'Stanley',
     price: 6999.99,
     originalPrice: 7999.99,
-    image: '../src/assets/images/products/manuales/cinta-metrica.jpg',
+    image: cintaMetrica,
     description: 'Cinta métrica profesional de 8 metros con cinta de acero',
     stock: 25,
     featured: false,
@@ -423,7 +480,7 @@ export const products = [
     brand: 'Stanley',
     price: 14999.99,
     originalPrice: 16999.99,
-    image: '../src/assets/images/products/manuales/nivel-burbuja.jpg',
+    image: nivelBurbuja,
     description: 'Nivel profesional de aluminio con 3 viales de burbuja',
     stock: 14,
     featured: false,
@@ -441,7 +498,7 @@ export const products = [
     brand: 'Tersuave',
     price: 12999.99,
     originalPrice: null,
-    image: '../src/assets/images/products/pinturas/barniz-tersuave.jpg',
+    image: barnizTersuave,
     description: 'Barniz de poliuretano satinado para protección de maderas',
     stock: 12,
     featured: false,
@@ -457,7 +514,7 @@ export const products = [
     brand: 'Alba',
     price: 21999.99,
     originalPrice: 23999.99,
-    image: '../src/assets/images/products/pinturas/pintura-anticorrosiva.jpg',
+    image: pinturaAnticorrosiva,
     description: 'Pintura anticorrosiva 3 en 1 para hierro y metales',
     stock: 8,
     featured: true,
@@ -473,7 +530,7 @@ export const products = [
     brand: 'Alba',
     price: 3999.99,
     originalPrice: null,
-    image: '../src/assets/images/products/pinturas/bandeja-rodillo.jpg',
+    image: bandejaRodillo,
     description: 'Bandeja plástica con rejilla escurridora para trabajo eficiente',
     stock: 20,
     featured: false,
@@ -491,7 +548,7 @@ export const products = [
     brand: 'San Martín',
     price: 15999.99,
     originalPrice: null,
-    image: '../src/assets/images/products/construccion/arena-fina.jpg',
+    image: arenaFina,
     description: 'Arena fina lavada para mezclas de mortero y hormigón',
     stock: 10,
     featured: false,
@@ -507,7 +564,7 @@ export const products = [
     brand: 'Acindar',
     price: 28999.99,
     originalPrice: 30999.99,
-    image: '../src/assets/images/products/construccion/hierro-acindar.jpg',
+    image: hierroAcindar,
     description: 'Hierro corrugado diámetro 8mm para estructuras de hormigón armado',
     stock: 15,
     featured: false,
@@ -525,7 +582,7 @@ export const products = [
     brand: 'Pirelli',
     price: 3499.99,
     originalPrice: null,
-    image: '../src/assets/images/products/electricidad/interruptor-pirelli.jpg',
+    image: interruptorPirelli,
     description: 'Interruptor simple con luz piloto para localización en la oscuridad',
     stock: 30,
     featured: false,
@@ -541,7 +598,7 @@ export const products = [
     brand: 'SICA',
     price: 8999.99,
     originalPrice: 9999.99,
-    image: '../src/assets/images/products/electricidad/breaker-sica.jpg',
+    image: breakerSica,
     description: 'Disyuntor bipolar 20 amperes para tableros eléctricos',
     stock: 22,
     featured: false,
@@ -557,7 +614,7 @@ export const products = [
     brand: 'Pirelli',
     price: 1499.99,
     originalPrice: null,
-    image: '../src/assets/images/products/electricidad/caja-pirelli.jpg',
+    image: cajaPirelli,
     description: 'Caja rectangular plástica para instalación de tomacorrientes',
     stock: 40,
     featured: false,
@@ -575,7 +632,7 @@ export const products = [
     brand: 'Roca',
     price: 12999.99,
     originalPrice: 14999.99,
-    image: '../src/assets/images/products/plomeria/sifon-roca.jpg',
+    image: sifonRoca,
     description: 'Sifón cromado con trampa de 75mm para lavatorios',
     stock: 12,
     featured: false,
@@ -591,7 +648,7 @@ export const products = [
     brand: 'Tigre',
     price: 999.99,
     originalPrice: null,
-    image: '../src/assets/images/products/plomeria/cinta-teflon.jpg',
+    image: cintaTeflon,
     description: 'Cinta de teflón para sellado de uniones roscadas en tuberías',
     stock: 50,
     featured: false,
@@ -609,7 +666,7 @@ export const products = [
     brand: 'Black & Decker',
     price: 78999.99,
     originalPrice: 84999.99,
-    image: '../src/assets/images/products/jardin/cortadora-cesped.jpg',
+    image: cortadoraCesped,
     description: 'Cortadora de césped eléctrica con bolsa recolectora y altura ajustable',
     stock: 4,
     featured: true,
@@ -625,7 +682,7 @@ export const products = [
     brand: 'Garden',
     price: 4999.99,
     originalPrice: null,
-    image: '../src/assets/images/products/jardin/fertilizante.jpg',
+    image: fertilizante,
     description: 'Fertilizante balanceado NPK 15-15-15 para plantas y césped',
     stock: 25,
     featured: false,
@@ -643,7 +700,7 @@ export const products = [
     brand: 'Stanley',
     price: 7999.99,
     originalPrice: 8999.99,
-    image: '../src/assets/images/products/seguridad/guantes-cuero.jpg',
+    image: guantesCuero,
     description: 'Guantes de cuero resistentes para protección de manos en trabajos pesados',
     stock: 20,
     featured: false,
@@ -659,7 +716,7 @@ export const products = [
     brand: '3M',
     price: 5999.99,
     originalPrice: null,
-    image: '../src/assets/images/products/seguridad/anteojos-uv.jpg',
+    image: anteojosUv,
     description: 'Anteojos de seguridad con protección lateral y filtro UV',
     stock: 15,
     featured: false,
