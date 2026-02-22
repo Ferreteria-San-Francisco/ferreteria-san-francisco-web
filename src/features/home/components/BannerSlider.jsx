@@ -1,34 +1,34 @@
 import { useEffect, useState } from "react";
 
-import Slide1 from "../../../banner/banner-slide1.jpg";
-import Slide2 from "../../../banner/banner-slide2.jpg";
-import Slide3 from "../../../banner/banner-slide3.jpg";
-import Slide4 from "../../../banner/banner-slide4.jpg";
+import Slide1 from "../../../assets/images/banner/banner-slide1.jpg";
+import Slide2 from "../../../assets/images/banner/banner-slide2.jpg";
+import Slide3 from "../../../assets/images/banner/banner-slide3.jpg";
+import Slide4 from "../../../assets/images/banner/banner-slide4.jpg";
 
 const slides = [
   {
     title: "Calidad que construye confianza",
     subtitle: "Materiales y atención pensados para durar",
-    image: {Slide1},
+    image: Slide1,
     titleColor: "text-primary-light",
   },
   {
     title: "Todo para tu obra",
     subtitle: "Desde el cimiento hasta el último detalle",
-    image: {Slide2},
+    image: Slide2,
     titleColor: "text-primary-light",
   },
   {
     title: "Asesoramiento profesional",
     subtitle: "Te ayudamos a elegir lo que realmente necesitás",
-    image: {Slide3},
+    image: Slide3,
     titleColor: "text-primary-light",
   },
   {
   title: "Todo en un solo lugar",
   subtitle:
     "Ferretería, electricidad, sanitarios, herramientas, construcción, aberturas, forrajería, bicicletería, gas y más",
-  image: {Slide4},
+  image: Slide4,
   titleColor: "text-primary-light", 
   }
 ];
