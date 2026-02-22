@@ -1,11 +1,8 @@
-import historyImg from "../assets/images/about/about-history.jpg";
+import historyImg from "../../../assets/images/about/about-history.jpg";
 
 export default function CompanyHistory() {
   return (
-    <section
-      className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto mb-32 px-4"
-      aria-labelledby="historia-title"
-    >
+    <section className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto mb-32 px-4">
       <img
         src={historyImg}
         alt="Ferretería San Francisco en San Pedro de Colalao"
@@ -14,10 +11,7 @@ export default function CompanyHistory() {
       />
 
       <div>
-        <h2
-          id="historia-title"
-          className="text-3xl md:text-4xl font-semibold text-gray-800 mb-6"
-        >
+        <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-6">
           Nuestra Historia
         </h2>
 
