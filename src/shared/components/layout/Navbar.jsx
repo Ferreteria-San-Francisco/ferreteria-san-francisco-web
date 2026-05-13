@@ -2,6 +2,8 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../../assets/images/ferreteria-logo.png";
 import { useTheme } from "../../hooks/useTheme";
+import lunaDia from "../../../assets/luna-dia.svg";
+import lunaEstrella from "../../../assets/luna-estrellas.svg";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -37,10 +39,14 @@ export default function Navbar() {
           <button
             onClick={toggle}
             aria-label={isDark ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
-            className="ml-2 rounded-full p-2 text-xl transition-colors hover:bg-gray-100 dark:hover:bg-gray-700"
+            className="ml-2 rounded-full p-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-700"
             title={isDark ? "Modo claro" : "Modo oscuro"}
           >
-            {isDark ? "☀️" : "🌙"}
+            <img
+              src={isDark ? lunaDia : lunaEstrella}
+              alt={isDark ? "Modo claro" : "Modo oscuro"}
+              className="w-6 h-6"
+            />
           </button>
         </div>
 
@@ -49,14 +55,19 @@ export default function Navbar() {
           <button
             onClick={toggle}
             aria-label={isDark ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
-            className="text-xl rounded-full p-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+            className="rounded-full p-2 hover:bg-gray-100 dark:hover:bg-gray-700"
           >
-            {isDark ? "☀️" : "🌙"}
+            <img
+              src={isDark ? lunaDia : lunaEstrella}
+              alt={isDark ? "Modo claro" : "Modo oscuro"}
+              className="w-6 h-6"
+            />
           </button>
           <button
             className="text-2xl"
             onClick={() => setOpen(!open)}
             aria-label="Abrir menú"
+            style={{ color: 'var(--app-text)' }}
           >
             ☰
           </button>
