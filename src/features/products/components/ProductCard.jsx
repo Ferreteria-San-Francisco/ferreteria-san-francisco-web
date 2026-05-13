@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 export default function ProductCard({ product }) {
-
+  {/*
   const formatPrice = (price) => {
     return new Intl.NumberFormat('es-AR', {
       style: 'currency',
@@ -10,7 +10,7 @@ export default function ProductCard({ product }) {
       maximumFractionDigits: 2
     }).format(price);
   };
-
+  */}
   return (
     <div
       className="group rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300"
@@ -66,6 +66,7 @@ export default function ProductCard({ product }) {
         </p>
 
         {/* Precio */}
+        {/*
         <div className="flex items-center justify-between mb-4">
           <div>
             <span className="text-2xl font-bold" style={{ color: 'var(--app-text)' }}>
@@ -84,7 +85,7 @@ export default function ProductCard({ product }) {
             </span>
           )}
         </div>
-
+        */}
         {/* Características */}
         {product.characteristics && product.characteristics.length > 0 && (
           <div className="mb-4">
