@@ -1,16 +1,15 @@
 import { Link } from 'react-router-dom';
 
+const WHATSAPP_NUMBER = '5491131509571';
+
 export default function ProductCard({ product }) {
-  {/*
-  const formatPrice = (price) => {
-    return new Intl.NumberFormat('es-AR', {
-      style: 'currency',
-      currency: 'ARS',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 2
-    }).format(price);
-  };
-  */}
+
+const productUrl = `${window.location.origin}/productos/${product.id}`;
+
+const message = `Hola! Me interesa el producto: *${product.name}* (${product.brand}). ¿Podrían darme más información?\n\nLink: ${productUrl}`;
+
+const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
   return (
     <div
       className="group rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300"
@@ -25,7 +24,7 @@ export default function ProductCard({ product }) {
           loading="lazy"
         />
 
-        {/* Badges imagen */}
+        {/* Badges */}
         <div className="absolute top-3 left-3 flex flex-col gap-1">
           {product.featured && (
             <span className="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
@@ -65,27 +64,6 @@ export default function ProductCard({ product }) {
           {product.brand}
         </p>
 
-        {/* Precio */}
-        {/*
-        <div className="flex items-center justify-between mb-4">
-          <div>
-            <span className="text-2xl font-bold" style={{ color: 'var(--app-text)' }}>
-              {formatPrice(product.price)}
-            </span>
-            {product.originalPrice && (
-              <span className="ml-2 text-sm line-through" style={{ color: 'var(--app-text-muted)' }}>
-                {formatPrice(product.originalPrice)}
-              </span>
-            )}
-          </div>
-
-          {product.originalPrice && (
-            <span className="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">
-              {Math.round((1 - product.price / product.originalPrice) * 100)}% OFF
-            </span>
-          )}
-        </div>
-        */}
         {/* Características */}
         {product.characteristics && product.characteristics.length > 0 && (
           <div className="mb-4">
@@ -124,20 +102,24 @@ export default function ProductCard({ product }) {
         <div className="flex gap-2">
           <Link
             to={`/productos/${product.id}`}
-            className="flex-1 bg-primary hover:bg-primary-dark text-white font-semibold py-2.5 px-4 rounded-lg text-center transition-colors"
+            className="flex-1 bg-primary hover:bg-primary-dark text-white font-semibold py-2.5 px-4 rounded-lg text-center transition-colors text-sm"
           >
             Ver detalles
           </Link>
 
-          <button
-            className="flex items-center justify-center font-semibold py-2.5 px-4 rounded-lg transition-colors"
-            style={{ backgroundColor: 'var(--app-border)', color: 'var(--app-text)' }}
-            aria-label="Agregar al carrito"
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-1 bg-green-500 hover:bg-green-600 text-white font-semibold py-2.5 px-4 rounded-lg transition-colors text-sm"
+            aria-label="Consultar por WhatsApp"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.528 5.845L.057 23.571a.75.75 0 00.921.921l5.726-1.471A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.725 9.725 0 01-4.964-1.362l-.355-.212-3.698.95.968-3.596-.232-.371A9.725 9.725 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
             </svg>
-          </button>
+            Consultar
+          </a>
         </div>
       </div>
     </div>

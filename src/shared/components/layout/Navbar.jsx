@@ -9,8 +9,8 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { isDark, toggle } = useTheme();
 
-  const linkClass = ({ isActive }) =>
-    isActive ? "text-primary font-bold" : "text-gray-700 dark:text-gray-200 hover:text-primary";
+const linkClass = ({ isActive }) =>
+  isActive ? "text-primary font-bold" : "text-gray-2900 dark:text-gray-200 hover:text-primary";
 
   return (
     <nav

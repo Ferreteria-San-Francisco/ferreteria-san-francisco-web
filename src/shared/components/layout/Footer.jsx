@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-text-light py-12 mt-20">
+<footer className="py-12 mt-20 transition-colors duration-300" style={{ backgroundColor: 'var(--app-footer-bg)', color: 'var(--app-footer-text)' }}>
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div>
           <h3 className="text-xl font-bold text-primary-light mb-4">

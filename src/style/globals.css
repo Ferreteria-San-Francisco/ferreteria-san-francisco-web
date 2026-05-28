@@ -69,7 +69,14 @@
   --app-text-muted: var(--color-text-medium);
   --app-border: var(--color-gray-200);
   --app-nav-bg: #ffffff;
+  --app-footer-bg: #1f2937;
+--app-footer-text: #f9fafb;
 }
+/* Links del navbar en modo claro */
+nav a {
+  color: #111827;
+}
+
 
 /* ===== Dark Mode ===== */
 html.dark {
@@ -78,7 +85,22 @@ html.dark {
   --app-text: #f9fafb;
   --app-text-muted: #d1d5db;
   --app-border: #374151;
-  --app-nav-bg: #111827;
+  --app-nav-bg: #1e293b;
+  --app-footer-bg: #0f172a;
+--app-footer-text: #f9fafb;
+}
+
+/* Links del navbar en modo oscuro */
+html.dark nav a {
+  color: #e5e7eb;
+}
+
+nav a:hover {
+  color: var(--color-primary) !important;
+}
+
+nav a.text-primary {
+  color: var(--color-primary) !important;
 }
 
 /* ===========================================
