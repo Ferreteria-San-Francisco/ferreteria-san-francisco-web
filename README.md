@@ -20,7 +20,6 @@ Sitio web institucional y catálogo de productos para Ferretería San Francisco.
 - **Vista detalle** de productos con características y productos relacionados
 - **Sección de marcas** con detalle por marca
 - **Formulario de contacto** integrado con Formspree
-- **Chat en vivo** con Tawk.to
 - **SEO optimizado** con react-helmet-async, sitemap.xml y Open Graph
 - **Google Analytics** integrado
 - **Responsive** optimizado para mobile, tablet y desktop
@@ -44,7 +43,6 @@ Sitio web institucional y catálogo de productos para Ferretería San Francisco.
 | Servicio | Uso |
 |----------|-----|
 | Formspree | Envío de formulario de contacto |
-| Tawk.to | Chat en vivo |
 | Google Analytics | Analíticas |
 | Vercel | Hosting |
 
@@ -87,8 +85,8 @@ src/
 │   ├── about/         # Página institucional
 │   ├── contact/       # Formulario de contacto
 │   ├── promotions/    # Página de promociones
-│   ├── not-found/     # Página 404
-│   └── chatbot/       # Integración Tawk.to
+│   └─ not-found/     # Página 404
+│   
 │
 ├── shared/            # Código compartido
 │   ├── components/    # Componentes reutilizables

@@ -1,4 +1,4 @@
-import TawkTo from "../../chatbot/components/TawkTo.jsx";
+
 import GoogleMap from "../components/GoogleMap.jsx";
 import ContactInfo from "../components/ContactInfo.jsx";
 import ContactForm from "../components/ContactForm.jsx";
@@ -25,10 +25,6 @@ export default function ContactPage() {
 
         <div className="mt-12">
           <ContactInfo />
-        </div>
-
-        <div className="mt-12">
-          <TawkTo />
         </div>
       </div>
     </>
