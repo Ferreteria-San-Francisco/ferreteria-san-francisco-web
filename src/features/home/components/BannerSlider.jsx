@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Slide1 from "../../../assets/images/banner/banner-slide1.jpg";
 import Slide2 from "../../../assets/images/banner/banner-slide2.jpg";
 import Slide3 from "../../../assets/images/banner/banner-slide3.jpg";
-import Slide4 from "../../../assets/images/banner/banner-slide4.jpg";
+import Slide4 from "../../../assets/images/banner/banner-slide4.webp";
 
 const slides = [
   {
