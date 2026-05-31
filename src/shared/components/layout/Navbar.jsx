@@ -24,7 +24,7 @@ const linkClass = ({ isActive }) =>
           <img
             src={logo}
             alt="Ferretería San Francisco"
-            className="h-14 md:h-16 w-auto"
+            className="h-14 md:h-16 w-auto dark:invert dark:brightness-110"
           />
         </NavLink>
 
