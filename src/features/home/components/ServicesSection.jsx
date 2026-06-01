@@ -1,7 +1,7 @@
 export default function ServicesSection() {
   return (
     <section className="mb-16">
-      <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-gray-100 mb-4">
+      <h2 className="text-4xl font-bold text-center text-primary mb-4">
         Nuestros Servicios
       </h2>
 
