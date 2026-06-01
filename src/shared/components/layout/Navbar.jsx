@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../../assets/images/ferreteria-logo.png";
+import logoOscuro from "../../../assets/images/ferreteria-logo-oscuro.png";
 import { useTheme } from "../../hooks/useTheme";
 import lunaDia from "../../../assets/luna-dia.svg";
 import lunaEstrella from "../../../assets/luna-estrellas.svg";
@@ -22,9 +23,9 @@ const linkClass = ({ isActive }) =>
         {/* Logo */}
         <NavLink to="/" className="flex items-center">
           <img
-            src={logo}
+            src={isDark ? logoOscuro : logo}
             alt="Ferretería San Francisco"
-            className="h-14 md:h-16 w-auto dark:invert dark:brightness-110"
+            className="h-14 md:h-16 w-auto"
           />
         </NavLink>
 
