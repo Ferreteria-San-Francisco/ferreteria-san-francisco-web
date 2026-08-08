@@ -8,9 +8,11 @@ export default function FeatureProducts() {
   if (featured.length === 0) return null;
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-12 pointer-events-auto" style={{ backgroundColor: 'var(--app-surface)' }}>
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Productos Destacados</h2>
+        <h2 className="text-3xl font-bold text-center mb-8" style={{ color: 'var(--app-text)' }}>
+          Productos Destacados
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {featured.map(product => (
             <ProductCard key={product.id} product={product} />

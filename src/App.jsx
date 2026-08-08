@@ -8,6 +8,8 @@ const AboutPage = lazy(() => import('./features/about/pages/AboutPage'));
 const ContactPage = lazy(() => import('./features/contact/pages/ContactPage'));
 const MarcasPage = lazy(() => import('./features/brands/pages/MarcasPage'));
 const BrandDetailPage = lazy(() => import('./features/brands/pages/BrandDetailPage'));
+const ProductsPage = lazy(() => import('./features/products/pages/ProductsPage'));
+const ProductDetailPage = lazy(() => import('./features/products/pages/ProductDetailPage'));
 const PromotionsPage = lazy(() => import('./features/promotions/pages/PromotionsPage'));
 const NotFoundPage = lazy(() => import("./features/not-found/pages/NotFoundPage"));
 
@@ -23,6 +25,8 @@ function App() {
             <Route path="/contacto" element={<ContactPage />} />
             <Route path="/marcas" element={<MarcasPage />} />
             <Route path="/marcas/:id" element={<BrandDetailPage />} />
+            <Route path="/productos" element={<ProductsPage />} />
+            <Route path="/productos/:id" element={<ProductDetailPage />} />
             <Route path="/promociones" element={<PromotionsPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
