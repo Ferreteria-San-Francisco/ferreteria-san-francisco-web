@@ -12,7 +12,7 @@ export default function NotFoundMessage() {
       </p>
 
       <p className="text-gray-500 mb-8">
-        Probá volver al inicio o explorar nuestros productos.
+        Probá volver al inicio o explorar nuestras marcas.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -24,10 +24,10 @@ export default function NotFoundMessage() {
         </Link>
 
         <Link
-          to="/productos"
+          to="/marcas"
           className="px-6 py-3 rounded-xl border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
         >
-          Ver productos
+          Ver marcas
         </Link>
       </div>
     </div>

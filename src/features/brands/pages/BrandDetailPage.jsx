@@ -1,7 +1,5 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { marcas } from '../../../shared/data/marcas';
-import { products } from '../../../shared/data/products';
-import ProductCard from '../../products/components/ProductCard';
 
 export default function BrandDetailPage() {
   const { id } = useParams();
@@ -31,9 +29,6 @@ export default function BrandDetailPage() {
     );
   }
 
-  
-  const brandProducts = products.filter(p => p.brand === brand.name);
-
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       
@@ -53,38 +48,19 @@ export default function BrandDetailPage() {
         <p className="text-gray-600 mt-2">
           Categoría: <span className="font-medium">{brand.category}</span>
         </p>
-        <p className="text-sm text-gray-500 mt-1">
-          {brandProducts.length} producto(s) disponibles
-        </p>
       </div>
 
-      
-      {brandProducts.length === 0 ? (
-        <div className="text-center py-12">
-          <p className="text-gray-500">No hay productos disponibles para esta marca.</p>
-          <p className="text-xs text-gray-400 mt-2">Nombre usado para filtrar: "{brand.name}"</p>
-        </div>
-      ) : (
-        <>
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
-            Productos de {brand.name}
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {brandProducts.map(product => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        </>
-      )}
-
-      
-      {import.meta.env?.MODE === 'development' && (
-        <div className="mt-8 p-3 bg-gray-50 rounded text-xs">
-          <p><strong>Debug:</strong> ID={id} → brandId={brandId}</p>
-          <p>Marca encontrada: {brand ? `"${brand.name}"` : '❌ Ninguna'}</p>
-          <p>Productos filtrados: {brandProducts.length}</p>
-        </div>
-      )}
+      <div className="text-center py-12">
+        <p className="text-gray-600">
+          Consultanos por los productos {brand.name} disponibles en el local.
+        </p>
+        <Link
+          to="/contacto"
+          className="inline-block mt-4 px-6 py-3 rounded-xl bg-primary text-white hover:bg-primary-dark transition"
+        >
+          Consultar disponibilidad
+        </Link>
+      </div>
     </div>
   );
 }
