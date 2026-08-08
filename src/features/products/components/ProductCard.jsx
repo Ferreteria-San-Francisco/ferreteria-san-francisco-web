@@ -16,11 +16,11 @@ const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
       style={{ backgroundColor: 'var(--app-surface)', border: '1px solid var(--app-border)' }}
     >
       {/* Imagen */}
-      <div className="relative h-56 overflow-hidden" style={{ backgroundColor: 'var(--app-bg)' }}>
+      <div className="relative h-56 overflow-hidden p-4" style={{ backgroundColor: 'var(--app-bg)' }}>
         <img
           src={product.image || 'https://via.placeholder.com/400x300?text=Producto'}
           alt={product.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
           loading="lazy"
         />
 
@@ -31,27 +31,25 @@ const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
               🔥 Destacado
             </span>
           )}
-          {product.stock <= 5 && product.stock > 0 && (
-            <span className="bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1 rounded-full">
-              ⚡ Últimas {product.stock} unidades
-            </span>
-          )}
-          {product.stock === 0 && (
-            <span className="bg-gray-100 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full">
-              🔄 Próximamente
-            </span>
-          )}
         </div>
       </div>
 
       {/* Contenido */}
       <div className="p-5">
 
-        {/* Categoría badge */}
-        <div className="mb-2">
+        {/* Categoría y subcategoría badges */}
+        <div className="mb-2 flex flex-wrap gap-1">
           <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded">
             {product.category}
           </span>
+          {product.subcategory && (
+            <span
+              className="text-xs font-medium px-2 py-1 rounded"
+              style={{ backgroundColor: 'var(--app-bg)', color: 'var(--app-text-muted)' }}
+            >
+              {product.subcategory}
+            </span>
+          )}
         </div>
 
         {/* Nombre */}
@@ -80,23 +78,15 @@ const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
           </div>
         )}
 
-        {/* Disponibilidad */}
-        <div className="mb-4">
-          <div className="flex items-center justify-between text-sm">
-            <span style={{ color: 'var(--app-text-muted)' }}>Disponibilidad:</span>
-            <span className={`font-semibold ${product.stock > 10 ? 'text-green-600' : product.stock > 0 ? 'text-amber-600' : 'text-red-600'}`}>
-              {product.stock > 10 ? 'Disponible' : product.stock > 0 ? `Últimas ${product.stock}` : 'Sin stock'}
-            </span>
+        {/* Aplicación */}
+        {product.application && (
+          <div className="mb-4 p-3 rounded-lg" style={{ backgroundColor: 'var(--app-bg)' }}>
+            <p className="text-xs font-semibold text-primary mb-1">Se usa en</p>
+            <p className="text-xs line-clamp-2" style={{ color: 'var(--app-text-muted)' }}>
+              {product.application}
+            </p>
           </div>
-          {product.stock > 0 && (
-            <div className="w-full rounded-full h-1.5 mt-1" style={{ backgroundColor: 'var(--app-border)' }}>
-              <div
-                className={`h-1.5 rounded-full ${product.stock > 10 ? 'bg-green-500' : 'bg-amber-500'}`}
-                style={{ width: `${Math.min(100, (product.stock / 20) * 100)}%` }}
-              />
-            </div>
-          )}
-        </div>
+        )}
 
         {/* Acciones */}
         <div className="flex gap-2">

@@ -1,3 +1,5 @@
+import dealerLogo from '../../assets/images/products/Dealer/dealer-logo.jpg';
+
 export const marcas = [
   {
     id: 1,
@@ -218,5 +220,15 @@ export const marcas = [
     website: 'https://www.3m.com.ar',
     featured: true,
     productsCount: 2
+  },
+  {
+    id: 23,
+    name: 'Dealer',
+    logo: dealerLogo,
+    category: 'plomeria',
+    description: 'Soluciones sanitarias: repuestos y accesorios para inodoros, válvulas y conexiones de plomería.',
+    website: '',
+    featured: false,
+    productsCount: 7
   }
 ];

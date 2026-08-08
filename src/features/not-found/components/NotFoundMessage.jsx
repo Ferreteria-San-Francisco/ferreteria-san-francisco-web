@@ -24,6 +24,13 @@ export default function NotFoundMessage() {
         </Link>
 
         <Link
+          to="/productos"
+          className="px-6 py-3 rounded-xl border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
+        >
+          Ver productos
+        </Link>
+
+        <Link
           to="/marcas"
           className="px-6 py-3 rounded-xl border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
         >

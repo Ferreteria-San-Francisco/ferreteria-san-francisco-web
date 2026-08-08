@@ -29,8 +29,6 @@ export default function ProductsPage() {
     return [...filteredProducts].sort((a, b) => {
       if (sortBy === 'name-asc') return a.name.localeCompare(b.name);
       if (sortBy === 'name-desc') return b.name.localeCompare(a.name);
-      if (sortBy === 'price-asc') return a.price - b.price;
-      if (sortBy === 'price-desc') return b.price - a.price;
       return 0;
     });
   }, [filteredProducts, sortBy]);
@@ -75,8 +73,6 @@ export default function ProductsPage() {
             >
               <option value="name-asc">Nombre A → Z</option>
               <option value="name-desc">Nombre Z → A</option>
-              <option value="price-asc">Precio: menor a mayor</option>
-              <option value="price-desc">Precio: mayor a menor</option>
             </select>
           </div>
 
@@ -113,11 +109,18 @@ export default function ProductsPage() {
         </div>
 
         {/* Grid de productos */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {paginatedProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
+        {paginatedProducts.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {paginatedProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-16" style={{ color: 'var(--app-text-muted)' }}>
+            <p className="text-lg">Todavía no hay productos cargados en esta categoría.</p>
+            <p className="text-sm mt-1">Estamos sumando nuestro catálogo real de a poco. ¡Volvé pronto!</p>
+          </div>
+        )}
 
         {/* Paginación */}
         {totalPages > 1 && (

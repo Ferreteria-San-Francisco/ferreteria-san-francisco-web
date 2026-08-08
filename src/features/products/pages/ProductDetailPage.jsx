@@ -53,17 +53,24 @@ const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
         <div className="grid md:grid-cols-2 gap-8">
 
           {/* Imagen */}
-          <div className="rounded-xl overflow-hidden" style={{ backgroundColor: 'var(--app-bg)' }}>
+          <div className="rounded-xl overflow-hidden p-6" style={{ backgroundColor: 'var(--app-bg)' }}>
             <img
               src={product.image}
               alt={product.name}
-              className="w-full h-96 object-cover"
+              className="w-full h-96 object-contain"
             />
           </div>
 
           {/* Info */}
           <div>
-            <span className="text-sm text-primary font-semibold">{product.brand}</span>
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-sm text-primary font-semibold">{product.brand}</span>
+              {product.sku && (
+                <span className="text-xs" style={{ color: 'var(--app-text-muted)' }}>
+                  SKU: {product.sku}
+                </span>
+              )}
+            </div>
             <h1 className="text-3xl font-bold mt-2" style={{ color: 'var(--app-text)' }}>
               {product.name}
             </h1>
@@ -71,6 +78,16 @@ const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
             <p className="mt-4" style={{ color: 'var(--app-text-muted)' }}>
               {product.description}
             </p>
+
+            {/* Para qué sirve */}
+            {product.application && (
+              <div className="mt-6 p-4 rounded-lg bg-primary/10 border border-primary/20">
+                <h3 className="font-semibold mb-1 text-primary">Para qué sirve</h3>
+                <p className="text-base" style={{ color: 'var(--app-text)' }}>
+                  {product.application}
+                </p>
+              </div>
+            )}
 
             {/* Características */}
             {product.characteristics && (
@@ -88,13 +105,6 @@ const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
                 </ul>
               </div>
             )}
-
-            {/* Stock */}
-            <div className="mt-6">
-              <span className={`font-semibold ${product.stock > 0 ? 'text-green-600' : 'text-red-600'}`}>
-                {product.stock > 0 ? `${product.stock} en stock` : 'Sin stock'}
-              </span>
-            </div>
 
             {/* Botones */}
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
