@@ -32,7 +32,6 @@ const linkClass = ({ isActive }) =>
         {/* Links desktop */}
         <div className="hidden md:flex gap-6 items-center">
           <NavLink to="/" className={linkClass}>Home</NavLink>
-          <NavLink to="/productos" className={linkClass}>Productos</NavLink>
           <NavLink to="/nosotros" className={linkClass}>Nosotros</NavLink>
           <NavLink to="/contacto" className={linkClass}>Contacto</NavLink>
 
@@ -83,7 +82,6 @@ const linkClass = ({ isActive }) =>
         >
           <div className="flex flex-col gap-4">
             <NavLink to="/" onClick={() => setOpen(false)} className={linkClass}>Home</NavLink>
-            <NavLink to="/productos" onClick={() => setOpen(false)} className={linkClass}>Productos</NavLink>
             <NavLink to="/nosotros" onClick={() => setOpen(false)} className={linkClass}>Nosotros</NavLink>
             <NavLink to="/contacto" onClick={() => setOpen(false)} className={linkClass}>Contacto</NavLink>
           </div>
