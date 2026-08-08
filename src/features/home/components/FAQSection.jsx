@@ -1,3 +1,5 @@
+import faqData from '../data/faqData.js';
+
 export default function FAQSection() {
   return (
     <section className="mb-20 max-w-4xl mx-auto">
@@ -8,46 +10,16 @@ export default function FAQSection() {
       <div className="w-12 h-1 bg-primary mb-10 rounded-full mx-auto" />
 
       <div className="space-y-6 text-left">
-
-    
-        <div className="p-6 border border-gray-200 rounded-xl shadow-sm">
-          <h3 className="text-xl font-semibold text-primary mb-2">
-            ¿Hacen envíos a domicilio?
-          </h3>
-          <p className="text-gray-600">
-            Sí, realizamos entregas a domicilio y obras dentro de la zona. Consultanos por costos y disponibilidad.
-          </p>
-        </div>
-
-      
-        <div className="p-6 border border-gray-200 rounded-xl shadow-sm">
-          <h3 className="text-xl font-semibold text-primary mb-2">
-            ¿Cuáles son los horarios de atención?
-          </h3>
-          <p className="text-gray-600">
-            Lunes a sábados de 8:00 - 13:00 hs y 17:00 - 21:00 hs. Domingos de 8:00 - 13:00 hs.
-          </p>
-        </div>
-
-   
-        <div className="p-6 border border-gray-200 rounded-xl shadow-sm">
-          <h3 className="text-xl font-semibold text-primary mb-2">
-            ¿Puedo pedir presupuesto?
-          </h3>
-          <p className="text-gray-600">
-            Por supuesto. Podés solicitarlo por WhatsApp, teléfono o directamente desde el formulario de contacto.
-          </p>
-        </div>
-
-    
-        <div className="p-6 border border-gray-200 rounded-xl shadow-sm">
-          <h3 className="text-xl font-semibold text-primary mb-2">
-            ¿Cuáles son los métodos de pago disponibles?
-          </h3>
-          <p className="text-gray-600">
-            Aceptamos efectivo, tarjetas de crédito y débito, y transferencias bancarias.
-          </p>
-        </div>
+        {faqData.map(({ question, answer }) => (
+          <div key={question} className="p-6 border border-gray-200 rounded-xl shadow-sm">
+            <h3 className="text-xl font-semibold text-primary mb-2">
+              {question}
+            </h3>
+            <p className="text-gray-600">
+              {answer}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );
