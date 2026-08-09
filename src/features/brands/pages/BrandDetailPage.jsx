@@ -1,10 +1,14 @@
+import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { marcas } from '../../../shared/data/marcas';
 import { products } from '../../../shared/data/products';
 import ProductCard from '../../products/components/ProductCard';
 
+const PRODUCTS_PER_PAGE = 9;
+
 export default function BrandDetailPage() {
   const { id } = useParams();
+  const [page, setPage] = useState(1);
 
   
   const brandId = Number(id);
@@ -32,6 +36,9 @@ export default function BrandDetailPage() {
   }
 
   const brandProducts = products.filter(p => p.brand === brand.name);
+  const totalPages = Math.ceil(brandProducts.length / PRODUCTS_PER_PAGE);
+  const startIndex = (page - 1) * PRODUCTS_PER_PAGE;
+  const paginatedProducts = brandProducts.slice(startIndex, startIndex + PRODUCTS_PER_PAGE);
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
@@ -55,11 +62,37 @@ export default function BrandDetailPage() {
       </div>
 
       {brandProducts.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {brandProducts.map(product => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
+        <>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {paginatedProducts.map(product => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+
+          {totalPages > 1 && (
+            <div className="flex justify-center gap-2 mt-8">
+              <button
+                onClick={() => setPage(p => Math.max(1, p - 1))}
+                disabled={page === 1}
+                className="px-4 py-2 rounded disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed transition-colors border border-gray-300 text-gray-700"
+              >
+                Anterior
+              </button>
+
+              <span className="px-4 py-2 text-gray-700">
+                Página {page} de {totalPages}
+              </span>
+
+              <button
+                onClick={() => setPage(p => Math.min(totalPages, p + 1))}
+                disabled={page === totalPages}
+                className="px-4 py-2 rounded disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed transition-colors border border-gray-300 text-gray-700"
+              >
+                Siguiente
+              </button>
+            </div>
+          )}
+        </>
       ) : (
         <div className="text-center py-12">
           <p className="text-gray-600">
