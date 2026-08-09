@@ -1,4 +1,5 @@
 import dealerLogo from '../../assets/images/products/Dealer/dealer-logo.jpg';
+import suprabondLogo from '../../assets/images/products/Suprabond/suprabond-logo.webp';
 // Nota: el logo real de Akapol (akapol-logo.png) tiene texto blanco sobre fondo
 // transparente y no se distingue en el círculo de fondo claro de BrandDetailPage.
 // Se usa el placeholder de iniciales hasta conseguir una versión con mejor contraste.
@@ -243,5 +244,15 @@ export const marcas = [
     website: 'https://www.akapol.com.ar',
     featured: true,
     productsCount: 40
+  },
+  {
+    id: 25,
+    name: 'Suprabond',
+    logo: suprabondLogo,
+    category: 'adhesivos-selladores',
+    description: 'Adhesivos, selladores de silicona y espuma de poliuretano. Incluye la línea BULIT de herramientas manuales y accesorios.',
+    website: '',
+    featured: true,
+    productsCount: 82
   }
 ];
