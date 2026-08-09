@@ -30,7 +30,7 @@ import plasticolaClasica88 from '../../assets/images/products/Akapol/plasticola-
 import plasticolaClasica486 from '../../assets/images/products/Akapol/plasticola-clasica-486g.png';
 import plasticolaClasica973 from '../../assets/images/products/Akapol/plasticola-clasica-973g.png';
 import plasticolaColor from '../../assets/images/products/Akapol/plasticola-color-35g.png';
-import plasticolaFlop from '../../assets/images/products/Akapol/plasticola-flop-35g.png';
+import plasticolaFluo from '../../assets/images/products/Akapol/plasticola-fluo-35g.png';
 import plasticolaGlitter from '../../assets/images/products/Akapol/plasticola-glitter-31g.png';
 import voligoma30 from '../../assets/images/products/Akapol/voligoma-30ml.png';
 import voligoma50 from '../../assets/images/products/Akapol/voligoma-50ml.png';
@@ -521,16 +521,16 @@ export const products = [
   },
   {
     id: 29,
-    name: 'Plasticola Flop 35g',
+    name: 'Plasticola Fluo 35g',
     category: 'adhesivos-selladores',
     subcategory: 'utiles-escolares',
     brand: 'Akapol',
-    image: plasticolaFlop,
+    image: plasticolaFluo,
     description:
-      'Plasticola en versión fluorescente ("Flop"): mismo adhesivo vinílico no tóxico y lavable, pero en colores flúo bien vibrantes. Disponible en amarillo, azul, naranja, rosa, verde y violeta.',
+      'Plasticola en versión fluorescente: mismo adhesivo vinílico no tóxico y lavable, pero en colores flúo bien vibrantes. Disponible en amarillo, azul, naranja, rosa, verde y violeta.',
     application: 'Manualidades y trabajos escolares que buscan un efecto de color fluorescente y llamativo.',
     characteristics: ['35g', '6 colores flúo disponibles', 'No tóxico', 'Lavable'],
-    tags: ['plasticola', 'flop', 'fluorescente', 'manualidades', 'akapol'],
+    tags: ['plasticola', 'fluo', 'fluorescente', 'manualidades', 'akapol'],
   },
   {
     id: 30,
