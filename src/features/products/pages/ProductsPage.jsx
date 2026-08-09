@@ -96,6 +96,7 @@ export default function ProductsPage() {
               <option value="electricidad">Electricidad</option>
               <option value="plomeria">Plomería</option>
               <option value="jardin">Jardín</option>
+              <option value="adhesivos-selladores">Adhesivos y Selladores</option>
             </select>
           </div>
 

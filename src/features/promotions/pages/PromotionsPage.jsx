@@ -17,19 +17,28 @@ export default function PromotionsPage() {
 
       <div className="w-12 h-1 bg-primary mb-8 rounded-full mx-auto" />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {promotions.map((promo) => (
-            <PromotionCard
-              key={promo.id}
-              image={promo.image}
-              label={promo.label}
-            />
-          ))}
-        </div>
+        {promotions.length > 0 ? (
+          <>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {promotions.map((promo) => (
+                <PromotionCard
+                  key={promo.id}
+                  image={promo.image}
+                  label={promo.label}
+                />
+              ))}
+            </div>
 
-        <p className="text-center text-gray-500 mt-15 pointer-events-none">
-          Promociones vigentes. Consultá disponibilidad y condiciones en el local.
-        </p>
+            <p className="text-center text-gray-500 mt-15 pointer-events-none">
+              Promociones vigentes. Consultá disponibilidad y condiciones en el local.
+            </p>
+          </>
+        ) : (
+          <div className="text-center py-16 pointer-events-none">
+            <p className="text-lg text-gray-600">No hay promociones vigentes por el momento.</p>
+            <p className="text-sm text-gray-500 mt-1">Consultanos por WhatsApp o en el local por descuentos y ofertas especiales.</p>
+          </div>
+        )}
 
       </section>
     </>

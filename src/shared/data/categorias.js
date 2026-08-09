@@ -105,6 +105,22 @@ export const categorias = [
     ]
   },
   {
+    id: 9,
+    name: 'Adhesivos y Selladores',
+    slug: 'adhesivos-selladores',
+    icon: '🧴',
+    description: 'Adhesivos de contacto, selladores, pastas reparadoras, lubricantes y cintas para reparaciones y trabajos varios.',
+    productCount: 40,
+    subcategories: [
+      { id: 901, name: 'Adhesivos de Contacto', slug: 'adhesivos-contacto' },
+      { id: 902, name: 'Selladores', slug: 'selladores' },
+      { id: 903, name: 'Reparación de Paredes', slug: 'reparacion-paredes' },
+      { id: 904, name: 'Lubricantes', slug: 'lubricantes' },
+      { id: 905, name: 'Cintas Adhesivas', slug: 'cintas-adhesivas' },
+      { id: 906, name: 'Útiles Escolares', slug: 'utiles-escolares' }
+    ]
+  },
+  {
     id: 8,
     name: 'Seguridad y Protección',
     slug: 'seguridad',

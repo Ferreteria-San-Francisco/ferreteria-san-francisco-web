@@ -5,7 +5,7 @@ const faqData = [
   },
   {
     question: '¿Cuáles son los horarios de atención?',
-    answer: 'Lunes a sábados de 8:00 - 13:00 hs y 17:00 - 21:00 hs. Domingos de 8:00 - 13:00 hs.',
+    answer: 'Lunes a sábados de 8:00 - 13:00 hs y 17:00 - 21:00 hs. Domingos de 8:30 - 13:00 hs.',
   },
   {
     question: '¿Puedo pedir presupuesto?',

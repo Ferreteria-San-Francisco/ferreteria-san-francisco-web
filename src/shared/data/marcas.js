@@ -1,4 +1,7 @@
 import dealerLogo from '../../assets/images/products/Dealer/dealer-logo.jpg';
+// Nota: el logo real de Akapol (akapol-logo.png) tiene texto blanco sobre fondo
+// transparente y no se distingue en el círculo de fondo claro de BrandDetailPage.
+// Se usa el placeholder de iniciales hasta conseguir una versión con mejor contraste.
 
 export const marcas = [
   {
@@ -230,5 +233,15 @@ export const marcas = [
     website: '',
     featured: false,
     productsCount: 7
+  },
+  {
+    id: 24,
+    name: 'Akapol',
+    logo: null,
+    category: 'adhesivos-selladores',
+    description: 'Fabricante argentino de adhesivos y selladores: Poxipol, Poxi Mix, Plasticola, Fastix y más. Distribuidor oficial de WD-40.',
+    website: 'https://www.akapol.com.ar',
+    featured: true,
+    productsCount: 40
   }
 ];
