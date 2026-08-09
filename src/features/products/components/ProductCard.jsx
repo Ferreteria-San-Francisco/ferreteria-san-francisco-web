@@ -12,7 +12,7 @@ const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
 
   return (
     <div
-      className="group rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300"
+      className="group h-full flex flex-col rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300"
       style={{ backgroundColor: 'var(--app-surface)', border: '1px solid var(--app-border)' }}
     >
       {/* Imagen */}
@@ -35,7 +35,7 @@ const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
       </div>
 
       {/* Contenido */}
-      <div className="p-5">
+      <div className="p-5 flex flex-col grow">
 
         {/* Categoría y subcategoría badges */}
         <div className="mb-2 flex flex-wrap gap-1">
@@ -53,7 +53,7 @@ const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
         </div>
 
         {/* Nombre */}
-        <h3 className="text-lg font-bold mb-1 line-clamp-2" style={{ color: 'var(--app-text)' }}>
+        <h3 className="text-lg font-bold mb-1 line-clamp-2 min-h-14" style={{ color: 'var(--app-text)' }}>
           {product.name}
         </h3>
 
@@ -89,7 +89,7 @@ const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
         )}
 
         {/* Acciones */}
-        <div className="flex gap-2">
+        <div className="flex gap-2 mt-auto">
           <Link
             to={`/productos/${product.id}`}
             className="flex-1 bg-primary hover:bg-primary-dark text-white font-semibold py-2.5 px-4 rounded-lg text-center transition-colors text-sm"

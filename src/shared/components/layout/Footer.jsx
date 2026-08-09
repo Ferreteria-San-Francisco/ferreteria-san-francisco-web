@@ -17,7 +17,7 @@ const Footer = () => {
           <h4 className="text-lg font-semibold text-primary-light mb-4">
             Servicios
           </h4>
-          <ul className="space-y-2 text-sm text-text-light">
+          <ul className="space-y-2 text-sm">
             <li>Artículos de ferretería</li>
             <li>Electricidad y sanitarios</li>
             <li>Herramientas y construcción</li>
