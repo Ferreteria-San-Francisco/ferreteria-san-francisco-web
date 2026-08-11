@@ -28,10 +28,10 @@ export default function FaqChatWidget() {
             className="px-4 py-3 flex items-center gap-3"
             style={{ backgroundColor: 'rgba(246, 199, 0, 0.12)', borderBottom: '1px solid var(--app-border)' }}
           >
-            <img src={raulitoIcon} alt="" className="w-12 h-12 shrink-0 rounded-full" />
+            <img src={raulitoIcon} alt="" className="w-16 h-16 shrink-0 rounded-full object-cover" />
             <div>
-              <p className="font-semibold" style={{ color: 'var(--app-text)' }}>Ferretería San Francisco</p>
-              <p className="text-sm" style={{ color: 'var(--app-text-muted)' }}>¿En qué podemos ayudarte?</p>
+              <p className="font-semibold" style={{ color: 'var(--app-text)' }}>Hablá con Raulito</p>
+              <p className="text-sm" style={{ color: 'var(--app-text-muted)' }}>¿En qué te puedo ayudar?</p>
             </div>
           </div>
 
@@ -82,17 +82,18 @@ export default function FaqChatWidget() {
 
       <button
         onClick={toggleOpen}
-        aria-label={isOpen ? 'Cerrar preguntas frecuentes' : 'Abrir preguntas frecuentes'}
-        className="w-20 h-20 rounded-full shadow-xl flex items-center justify-center overflow-hidden transition-transform hover:scale-105"
+        aria-label={isOpen ? 'Cerrar chat con Raulito' : 'Hablar con Raulito'}
+        className="w-20 h-20 rounded-full flex items-center justify-center overflow-hidden transition-all duration-150 hover:scale-105 hover:-translate-y-0.5 active:scale-95 active:translate-y-0"
         style={{
           backgroundColor: isOpen ? 'var(--color-primary-dark)' : 'var(--app-surface)',
-          border: isOpen ? 'none' : '2px dashed var(--color-primary)',
+          border: isOpen ? 'none' : '1px solid var(--app-border)',
+          boxShadow: '0 10px 20px -4px rgba(0,0,0,0.35), 0 4px 8px -2px rgba(0,0,0,0.25), 0 2px 0 0 rgba(0,0,0,0.15) inset',
         }}
       >
         {isOpen ? (
           <span className="text-2xl text-white">✕</span>
         ) : (
-          <img src={raulitoIcon} alt="Abrir preguntas frecuentes" className="w-full h-full object-cover rounded-full" />
+          <img src={raulitoIcon} alt="Hablar con Raulito" className="w-full h-full object-cover rounded-full" />
         )}
       </button>
     </div>
