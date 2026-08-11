@@ -83,7 +83,7 @@ export default function FaqChatWidget() {
       <button
         onClick={toggleOpen}
         aria-label={isOpen ? 'Cerrar chat con Raulito' : 'Hablar con Raulito'}
-        className="w-20 h-20 rounded-full flex items-center justify-center overflow-hidden transition-all duration-150 hover:scale-105 hover:-translate-y-0.5 active:scale-95 active:translate-y-0"
+        className={`rounded-full flex items-center justify-center overflow-hidden transition-all duration-150 hover:scale-105 hover:-translate-y-0.5 active:scale-95 active:translate-y-0 ${isOpen ? 'w-12 h-12' : 'w-20 h-20'}`}
         style={{
           backgroundColor: isOpen ? 'var(--color-primary-dark)' : 'var(--app-surface)',
           border: isOpen ? 'none' : '1px solid var(--app-border)',
@@ -91,7 +91,7 @@ export default function FaqChatWidget() {
         }}
       >
         {isOpen ? (
-          <span className="text-2xl text-white">✕</span>
+          <span className="text-lg text-white">✕</span>
         ) : (
           <img src={raulitoIcon} alt="Hablar con Raulito" className="w-full h-full object-cover rounded-full" />
         )}
