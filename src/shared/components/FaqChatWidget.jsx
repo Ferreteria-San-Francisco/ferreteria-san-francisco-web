@@ -3,7 +3,7 @@ import faqData from '../../features/home/data/faqData.js';
 import raulitoIcon from '../../assets/images/Raulito.png';
 
 const WHATSAPP_NUMBER = '5491131509571';
-const whatsappMessage = 'Hola! Tengo una consulta que no encontré en las preguntas frecuentes.';
+const whatsappMessage = 'Hola! Tengo una consulta: ';
 const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
 
 export default function FaqChatWidget() {
