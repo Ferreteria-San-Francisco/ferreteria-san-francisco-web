@@ -19,14 +19,14 @@ export default function HomePage() {
         {/* Hero */}
         <Hero />
 
+        {/* Promoción vigente */}
+        <PromoBanner />
+
         {/* Servicio Section */}
         <Services />
 
         {/* Productos Destacados */}
         <FeatureProducts />
-
-        {/* Promoción vigente */}
-        <PromoBanner />
 
         {/* BannerSlider */}
         <BannerSlider />
