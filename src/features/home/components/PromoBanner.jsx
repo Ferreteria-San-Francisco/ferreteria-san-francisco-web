@@ -7,39 +7,22 @@ export default function PromoBanner() {
   if (!promo) return null;
 
   return (
-    <section className="py-12 pointer-events-auto" style={{ backgroundColor: 'var(--app-bg)' }}>
-      <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8" style={{ color: 'var(--app-text)' }}>
-          Promociones
-        </h2>
-        <Link
-          to="/promociones"
-          className="group flex flex-col items-center text-center gap-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden p-6 sm:p-8"
-          style={{ backgroundColor: 'var(--app-surface)', border: '1px solid var(--app-border)' }}
-        >
-          <img
-            src={promo.image}
-            alt={promo.label}
-            className="w-40 sm:w-56 h-auto object-contain rounded-lg shrink-0 group-hover:scale-105 transition-transform duration-300"
-          />
-          <div className="max-w-md">
-            <span className="inline-block bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">
-              Promoción vigente
-            </span>
-            <h3 className="text-2xl font-bold mb-2" style={{ color: 'var(--app-text)' }}>
-              {promo.label}
-            </h3>
-            {promo.description && (
-              <p className="text-sm mb-4" style={{ color: 'var(--app-text-muted)' }}>
-                {promo.description}
-              </p>
-            )}
-            <span className="inline-flex items-center gap-1 font-semibold text-primary text-sm">
-              Ver todas las promociones y condiciones →
-            </span>
-          </div>
-        </Link>
-      </div>
+    <section className="mb-16 pointer-events-auto">
+      <Link
+        to="/promociones"
+        className="group relative block rounded-xl overflow-hidden shadow-lg hover:shadow-2xl ring-1 ring-black/5 transition-all duration-300"
+      >
+        <img
+          src={promo.banner || promo.image}
+          alt={promo.label}
+          className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500"
+        />
+        <div className="absolute inset-0 bg-linear-to-t from-black/40 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4 sm:pb-6">
+          <span className="inline-flex items-center gap-2 bg-white text-gray-900 font-semibold text-sm sm:text-base px-5 py-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+            Ver promociones y condiciones →
+          </span>
+        </div>
+      </Link>
     </section>
   );
 }
