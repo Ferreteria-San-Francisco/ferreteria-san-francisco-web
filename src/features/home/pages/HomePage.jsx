@@ -1,6 +1,7 @@
 import Hero from "../components/Hero.jsx";
 import Services from "../components/ServicesSection.jsx";
 import FeatureProducts from "../components/FeatureProducts.jsx";
+import PromoBanner from "../components/PromoBanner.jsx";
 import FAQSection from "../components/FAQSection.jsx";
 import BannerSlider from "../components/BannerSlider.jsx";
 import SEO from '../../../shared/components/SEO';
@@ -23,6 +24,9 @@ export default function HomePage() {
 
         {/* Productos Destacados */}
         <FeatureProducts />
+
+        {/* Promoción vigente */}
+        <PromoBanner />
 
         {/* BannerSlider */}
         <BannerSlider />

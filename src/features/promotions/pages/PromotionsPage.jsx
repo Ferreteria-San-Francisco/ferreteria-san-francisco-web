@@ -11,7 +11,7 @@ export default function PromotionsPage() {
         url="/promociones"
       />
       <section className="max-w-7xl mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-4 pointer-events-none">
+        <h1 className="text-4xl font-bold text-center mb-4 pointer-events-none" style={{ color: 'var(--app-text)' }}>
           Promociones y Ofertas
         </h1>
 
@@ -29,14 +29,14 @@ export default function PromotionsPage() {
               ))}
             </div>
 
-            <p className="text-center text-gray-500 mt-15 pointer-events-none">
+            <p className="text-center mt-15 pointer-events-none" style={{ color: 'var(--app-text-muted)' }}>
               Promociones vigentes. Consultá disponibilidad y condiciones en el local.
             </p>
           </>
         ) : (
           <div className="text-center py-16 pointer-events-none">
-            <p className="text-lg text-gray-600">No hay promociones vigentes por el momento.</p>
-            <p className="text-sm text-gray-500 mt-1">Consultanos por WhatsApp o en el local por descuentos y ofertas especiales.</p>
+            <p className="text-lg" style={{ color: 'var(--app-text)' }}>No hay promociones vigentes por el momento.</p>
+            <p className="text-sm mt-1" style={{ color: 'var(--app-text-muted)' }}>Consultanos por WhatsApp o en el local por descuentos y ofertas especiales.</p>
           </div>
         )}
 
