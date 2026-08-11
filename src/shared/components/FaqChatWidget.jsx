@@ -83,7 +83,7 @@ export default function FaqChatWidget() {
       <button
         onClick={toggleOpen}
         aria-label={isOpen ? 'Cerrar preguntas frecuentes' : 'Abrir preguntas frecuentes'}
-        className="w-14 h-14 rounded-full shadow-xl flex items-center justify-center overflow-hidden transition-transform hover:scale-105"
+        className="w-20 h-20 rounded-full shadow-xl flex items-center justify-center overflow-hidden transition-transform hover:scale-105"
         style={{
           backgroundColor: isOpen ? 'var(--color-primary-dark)' : 'var(--app-surface)',
           border: isOpen ? 'none' : '2px dashed var(--color-primary)',
@@ -92,7 +92,7 @@ export default function FaqChatWidget() {
         {isOpen ? (
           <span className="text-2xl text-white">✕</span>
         ) : (
-          <img src={raulitoIcon} alt="Abrir preguntas frecuentes" className="w-[85%] h-[85%] object-contain rounded-full" />
+          <img src={raulitoIcon} alt="Abrir preguntas frecuentes" className="w-full h-full object-cover rounded-full" />
         )}
       </button>
     </div>
