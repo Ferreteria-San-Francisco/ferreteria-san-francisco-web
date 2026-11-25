@@ -372,12 +372,22 @@ html.navidad footer {
 .snowflake {
   position: absolute;
   top: -2rem;
-  color: #ffffff;
-  text-shadow: 0 0 3px rgba(148, 163, 184, 0.9);
+  /* Modo claro: celeste con contorno azul para que se vean sobre fondo blanco */
+  color: #BFDBFE;
+  text-shadow:
+    0 0 1px #3B82F6,
+    0 0 2px #2563EB,
+    0 0 6px rgba(59, 130, 246, 0.55);
   animation-name: navidad-snow;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   will-change: transform;
+}
+
+/* Modo oscuro: copos blancos */
+html.dark .snowflake {
+  color: #ffffff;
+  text-shadow: 0 0 3px rgba(148, 163, 184, 0.9);
 }
 
 @keyframes navidad-snow {
