@@ -1,4 +1,4 @@
-const Footer = () => {
+const Footer = ({ navidad = false }) => {
   return (
 <footer className="py-12 mt-20 transition-colors duration-300" style={{ backgroundColor: 'var(--app-footer-bg)', color: 'var(--app-footer-text)' }}>
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
@@ -78,6 +78,11 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-gray-700 mt-10 pt-6 text-center text-xs text-text-medium">
+        {navidad && (
+          <p className="text-base font-semibold text-primary-light mb-3">
+            🎄 ¡Felices Fiestas y próspero 2027! 🎄
+          </p>
+        )}
         <div>
           © {new Date().getFullYear()} Ferretería San Francisco. Todos los
           derechos reservados.

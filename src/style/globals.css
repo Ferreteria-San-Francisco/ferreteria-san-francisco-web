@@ -238,3 +238,166 @@ html.dark select option {
   background-color: var(--app-surface);
   color: var(--app-text);
 }
+/* ===========================================
+    TEMA NAVIDEÑO (html.navidad)
+    Se activa automáticamente entre el 8/12 y el 6/1
+    ver src/shared/config/seasonal.js
+   =========================================== */
+
+html.navidad {
+  --navidad-red: #B91C1C;
+  --navidad-green: #15803D;
+}
+
+/* Franja de saludo arriba del navbar */
+.navidad-banner {
+  color: #ffffff;
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      var(--navidad-red) 0 18px,
+      #991B1B 18px 36px
+    );
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+/* Borde verde debajo del navbar */
+html.navidad nav {
+  border-bottom: 4px solid var(--navidad-green);
+}
+
+/* Tira de lamparitas colgando debajo del header */
+.navidad-lights {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 28px;
+  margin-top: -2px;
+  pointer-events: none;
+}
+
+.navidad-wire {
+  position: absolute;
+  inset: 0 0 auto 0;
+  width: 100%;
+  height: 14px;
+  overflow: visible;
+}
+
+.navidad-wire path {
+  fill: none;
+  stroke: #14532D;
+  stroke-width: 2px;
+  vector-effect: non-scaling-stroke;
+}
+
+.navidad-bulb {
+  position: absolute;
+  top: 9px;
+  width: 9px;
+  height: 13px;
+  margin-left: -4.5px;
+  border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+  background: var(--bulb);
+  box-shadow: 0 0 6px 2px var(--bulb), 0 0 14px 4px color-mix(in srgb, var(--bulb) 45%, transparent);
+  animation-name: navidad-bulb;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* Casquillo de la lamparita */
+.navidad-bulb::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  width: 5px;
+  height: 4px;
+  margin-left: -2.5px;
+  border-radius: 1px;
+  background: #4B5563;
+}
+
+@keyframes navidad-bulb {
+  from { opacity: 0.35; box-shadow: 0 0 2px 0 var(--bulb); }
+  to   { opacity: 1;    box-shadow: 0 0 8px 3px var(--bulb), 0 0 18px 6px color-mix(in srgb, var(--bulb) 45%, transparent); }
+}
+
+/* Destellos sobre el header */
+.navidad-sparkles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.navidad-sparkle {
+  position: absolute;
+  color: #FACC15;
+  text-shadow: 0 0 4px #FDE68A, 0 0 10px #F59E0B;
+  opacity: 0;
+  transform: scale(0.3) rotate(0deg);
+  animation: navidad-sparkle 3.6s ease-in-out infinite;
+}
+
+@keyframes navidad-sparkle {
+  0%, 70%, 100% { opacity: 0; transform: scale(0.3) rotate(0deg); }
+  80%           { opacity: 1; transform: scale(1.15) rotate(45deg); }
+  90%           { opacity: 0.6; transform: scale(0.8) rotate(90deg); }
+}
+
+/* Footer con borde festivo */
+html.navidad footer {
+  border-top: 6px solid transparent;
+  border-image: repeating-linear-gradient(
+    90deg,
+    var(--navidad-red) 0 24px,
+    #ffffff 24px 48px,
+    var(--navidad-green) 48px 72px,
+    #ffffff 72px 96px
+  ) 6;
+}
+
+/* Nieve */
+.snowfall {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 40;
+}
+
+.snowflake {
+  position: absolute;
+  top: -2rem;
+  /* Modo claro: celeste con contorno azul para que se vean sobre fondo blanco */
+  color: #BFDBFE;
+  text-shadow:
+    0 0 1px #3B82F6,
+    0 0 2px #2563EB,
+    0 0 6px rgba(59, 130, 246, 0.55);
+  animation-name: navidad-snow;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+/* Modo oscuro: copos blancos */
+html.dark .snowflake {
+  color: #ffffff;
+  text-shadow: 0 0 3px rgba(148, 163, 184, 0.9);
+}
+
+@keyframes navidad-snow {
+  0%   { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50%  { transform: translate3d(var(--drift), 55vh, 0) rotate(180deg); }
+  100% { transform: translate3d(0, 110vh, 0) rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .snowfall { display: none; }
+  .navidad-bulb { animation: none; opacity: 1; }
+  .navidad-sparkle { animation: none; }
+}
