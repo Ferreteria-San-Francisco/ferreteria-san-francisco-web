@@ -7,7 +7,7 @@
 
 Sitio web institucional y catálogo de productos para Ferretería San Francisco. Desarrollado con React + Vite + TailwindCSS.
 
-**URL de producción:** [https://ferreteria-san-francisco.vercel.app](https://ferreteria-san-francisco.vercel.app)
+**URL de producción:** [https://ferreteriasanfrancisco.com.ar](https://ferreteriasanfrancisco.com.ar)
 
 ---
 
